@@ -1,0 +1,1 @@
+Search.setIndex({docnames:["index","wvv-data_analys"],envversion:53,filenames:["index.rst","wvv-data_analys.md"],objects:{},objnames:{},objtypes:{},terms:{index:0,modul:0,page:0,search:0},titles:["Welcome to Note\u2019s documentation!","hello world"],titleterms:{document:0,hello:1,indic:0,markdown:1,note:0,tabl:0,test:1,welcom:0,world:1}})
