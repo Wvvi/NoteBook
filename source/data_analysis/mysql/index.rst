@@ -3,7 +3,7 @@ Mysql
 
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :numbered: 2
 
     mysql
