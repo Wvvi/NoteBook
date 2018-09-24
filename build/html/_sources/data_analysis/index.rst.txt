@@ -3,14 +3,16 @@
 
 .. toctree::
     :maxdepth: 2
-    :numbered: 2
+
+    linux/index
+    mysql/index
+    python/index
+    jupyter/index
+    numpy/index
+    pandas/index
+    matplotlib/index
+    seaborn/index
 
 
-    01_linux
-    02_python
-    03_jupyter
-    04_numpy
-    05_pandas
-    06_matplotlib
-    07_seaborn
+
 
