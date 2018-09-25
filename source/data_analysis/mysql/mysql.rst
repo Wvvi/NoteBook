@@ -160,7 +160,7 @@
 
 .. code:: mysql
 
-    样例：
+    # 样例：
     CREATE TABLE IF NOT EXISTS `Scores`(
     `id` int(10) unsigned AUTO_INCREMENT,
     `student_no` varchar(10) not null default '' comment '学号',
@@ -179,11 +179,11 @@
 
 .. code:: mysql
 
-    #查看所有表
+    # 查看所有表
     show tables [like 'pattern'];
     show tables from tablename;
 
-    #查看表结构
+    # 查看表结构
     show create table tablename \G;
     DESC tablename;
 
@@ -192,51 +192,51 @@
 .. code:: mysql
 
     alter table tablename
-    #添加列
+    # 添加列
     add column age int(3);
 
-    #添加主键
+    # 添加主键
     add primary key(`id`);
 
-    #添加唯一索引
+    # 添加唯一索引
     add unique [索引名] (`id`);
 
-    #添加普通索引
+    # 添加普通索引
     add index [索引名] (`id`);
 
-    #修改列类型
+    # 修改列类型
     modify grade varchar(10);
 
-    #修改字段属性
+    # 修改字段属性
     modify grade varchar(10);
 
-    #更改字段名与类型
+    # 更改字段名与类型
     change age new_age int(3);
 
-    #更改表名
+    # 更改表名
     rename [to] new_table;
 
-    #删除字段
+    # 删除字段
     drop age;
 
-    #删除主键
+    # 删除主键
     drop primary key;
 
-    #删除索引
+    # 删除索引
     drop index 索引名;
 
-    #删除外键
+    # 删除外键
     drop foreing key 外键;
 
 其它
 
 .. code:: mysql
 
-    #删除表
+    # 删除表
     drop table tablename;
 
-    #清空表数据
+    # 清空表数据
     truncate tablename;
 
-    #复制表结构
+    # 复制表结构
     create table tablename select * from copy_tablename;
