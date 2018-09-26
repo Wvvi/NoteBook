@@ -160,7 +160,7 @@
 
 .. code:: mysql
 
-    # 样例：
+    -- 样例
     CREATE TABLE IF NOT EXISTS `Scores`(
     `id` int(10) unsigned AUTO_INCREMENT,
     `student_no` varchar(10) not null default '' comment '学号',
@@ -179,12 +179,12 @@
 
 .. code:: mysql
 
-    # 查看所有表
+    -- 查看所有表
     show tables [like 'pattern'];
     show tables from tablename;
 
-    # 查看表结构
-    show create table tablename \G;
+    -- 查看表结构
+    show create table tablename; \G
     DESC tablename;
 
 **Alter** 操作
@@ -192,51 +192,187 @@
 .. code:: mysql
 
     alter table tablename
-    # 添加列
+    -- 添加列
     add column age int(3);
 
-    # 添加主键
-    add primary key(`id`);
+    -- 添加主键
+    add primary key (`id`);
+    add primary key (`id`,'age');
 
-    # 添加唯一索引
-    add unique [索引名] (`id`);
+    -- 添加唯一索引，使得某字段的值不能重复(出null外，null可能会出现多次)
+    add unique key `id` (`id`);
 
-    # 添加普通索引
-    add index [索引名] (`id`);
+    -- 添加普通索引,索引值可出现多次
+    add index index_name (`id`);
 
-    # 修改列类型
+    -- 修改列类型
     modify grade varchar(10);
 
-    # 修改字段属性
+    -- 修改字段属性
     modify grade varchar(10);
 
-    # 更改字段名与类型
+    -- 更改字段名与类型
     change age new_age int(3);
 
-    # 更改表名
+    -- 更改表名
     rename [to] new_table;
 
-    # 删除字段
+    -- 删除字段
     drop age;
 
-    # 删除主键
+    -- 删除主键
     drop primary key;
 
-    # 删除索引
+    -- 删除索引
     drop index 索引名;
 
-    # 删除外键
+    -- 删除外键
     drop foreing key 外键;
+
+-  主键具有唯一性
+-  主键字段不能为null
+-  主键可以由多个字段共同组成
 
 其它
 
 .. code:: mysql
 
-    # 删除表
+    -- 删除表
     drop table tablename;
 
-    # 清空表数据
+    -- 清空表数据
     truncate tablename;
 
-    # 复制表结构
+    -- 复制表结构
     create table tablename select * from copy_tablename;
+
+-  truncate 是删除表再创建，delete 是逐条删除
+-  truncate 重置auto\_increment的值。而delete不会
+-  当被用于带分区的表时，truncate 会保留分区
+
+连接
+
+.. code:: mysql
+
+    -- inner join
+    SELECT a.runoob_id, a.runoob_author, b.runoob_count FROM runoob_tbl a INNER JOIN tcount_tbl b ON a.runoob_author = b.runoob_author;
+
+    -- left join
+    SELECT a.runoob_id, a.runoob_author, b.runoob_count FROM runoob_tbl a RIGHT JOIN tcount_tbl b ON a.runoob_author = b.runoob_author;
+
+    -- right join
+    SELECT a.runoob_id, a.runoob_author, b.runoob_count FROM runoob_tbl a RIGHT JOIN tcount_tbl b ON a.runoob_author = b.runoob_author;
+
+union
+
+.. code:: mysql
+
+    -- 用于将不同表中相同列中查询的数据展示出来（不包括重复数据）
+    select country from websites union select country from apps order by country;
+
+    -- 用于将不同表中相同列中查询的数据展示出来（包括重复数据）
+    select country from websites union all select country from apps order by country;
+
+内置函数
+========
+
+数值函数
+
+.. code:: mysql
+
+    abs(x)  -- 绝对值
+
+    format(x,d)  -- 格式化千分位数 format(1234567.456, 2) = 1,234,567.46
+
+    ceil(x)  -- 向上取整 ceil(10.1)=11
+
+    floor(x)  -- 向下取整 floor(10.1)=10
+
+    round(x)  -- 四舍五入
+
+    mod(m,n)  -- m%n
+
+    pi()  -- 获得圆周率
+
+    pow(m,n)  -- m^n
+
+    sqrt(x)  -- 算术平方根
+
+    rand()  -- 随机数
+
+    truncate(x,d)  -- 截取d位小数
+
+时间日期函数
+
+.. code:: mysql
+
+    now(),current_timestamp()  -- 当前日期时间
+
+    current_date()  -- 当前日期
+
+    current_time()  -- 当前时间
+
+    date('yyyy-mm-dd HH:MM:SS')  -- 获取日期部分
+
+    time('yyyy-mm-dd HH:MM:SS')  -- 获取是时间部分
+
+    date_format('yyyy-mm-dd HH:MM:SS', '%Y%m%d')  -- 格式化时间
+
+    unix_timestamp()  -- 将时间转化为unix时间戳
+
+    from_unixtime()  -- 将时间戳获得时间
+
+-  目前timestamp 所能表示的范围在 1970 - 2038之间 ,超过这个范围
+   得到的时间将会溢出 得到的时间是null
+
+字符串函数
+
+.. code:: mysql
+
+    length(string)  -- string长度，字节
+
+    char_length(string)  -- 字符个数
+
+    substring(str,position [,length])  -- 从str的position开始,取length个字符
+
+    replace(str,search_str,replace_str  -- 在str中用replace_str替换search_st
+
+    instr(string ,substring)    -- 返回substring首次在string中出现的位置
+            
+    concat(string [,...])    -- 连接字串
+            
+    charset(str)            -- 返回字串字符集
+            
+    lcase(string)            -- 转换成小写
+            
+    left(string, length)    -- 从string2中的左边起取length个字符
+            
+    load_file(file_name)    -- 从文件读取内容
+            
+    locate(substring, string [,start_position])    -- 同instr,但可指定开始位置
+            
+    lpad(string, length, pad)    -- 重复用pad加在string开头,直到字串长度为length
+            
+    repeat(string, count)    -- 重复count次
+            
+    rpad(string, length, pad)    -- 在str后用pad补充,直到长度为length
+            
+    ltrim(string)            -- 去除前端空格
+            
+    rtrim(string)            -- 去除后端空格
+            
+    strcmp(string1 ,string2)    -- 逐字符比较两字串大小
+
+流程函数
+
+.. code:: mysql
+
+    case when [condition] then result [when [condition] then result ...] [else result] end
+
+    SELECT CASE                 -- 样例
+    　　WHEN 1 > 0
+    　　THEN '1 > 0'
+    　　WHEN 2 > 0
+    　　THEN '2 > 0'
+    　　ELSE '3 > 0'
+    　　END
