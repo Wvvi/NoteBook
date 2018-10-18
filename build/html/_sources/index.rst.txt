@@ -12,9 +12,11 @@
 
 
    data_analysis/index
+   crawler/index
    machine_learning/index
    big_data/index
    tool/index
+
 
 
 
