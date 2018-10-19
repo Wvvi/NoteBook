@@ -109,7 +109,7 @@ type(comment)
 
 ### tag的名字
 
-操作文档树最简单的方法就是告诉它你想获取的tag的name.如果想获取 <head> 标签,只要用 `soup.head` :
+操作文档树最简单的方法就是告诉它你想获取的tag的name.如果想获取 `<head>` 标签,只要用 `soup.head` :
 
 ```html
 soup.head
@@ -119,7 +119,7 @@ soup.title
 # <title>The Dormouse's story</title>
 ```
 
-这是个获取tag的小窍门,可以在文档树的tag中多次调用这个方法.下面的代码可以获取<body>标签中的第一个<b>标签:
+这是个获取tag的小窍门,可以在文档树的tag中多次调用这个方法.下面的代码可以获取`<body>`标签中的第一个`<b>`标签:
 
 ```html
 soup.body.b
@@ -133,7 +133,7 @@ soup.a
 # <a class="sister" href="http://example.com/elsie" id="link1">Elsie</a>
 ```
 
-如果想要得到所有的<a>标签,或是通过名字得到比一个tag更多的内容的时候,就需要用到 Searching the tree 中描述的方法,比如: find_all()
+如果想要得到所有的`<a>`标签,或是通过名字得到比一个tag更多的内容的时候,就需要用到 Searching the tree 中描述的方法,比如: `find_all()`
 
 ```html
 soup.find_all('a')
@@ -161,7 +161,7 @@ title_tag.contents
 # [u'The Dormouse's story']
 ```
 
-`BeautifulSoup` 对象本身一定会包含子节点,也就是说<html>标签也是 `BeautifulSoup` 对象的子节点:
+`BeautifulSoup` 对象本身一定会包含子节点,也就是说,`<html>`标签也是 `BeautifulSoup` 对象的子节点:
 
 ```html
 len(soup.contents)
@@ -188,14 +188,14 @@ for child in title_tag.children:
 
 ### .descendants
 
-`.contents` 和 `.children` 属性仅包含tag的直接子节点.例如,<head>标签只有一个直接子节点<title>
+`.contents` 和 `.children` 属性仅包含tag的直接子节点.例如,`<head>`标签只有一个直接子节点`<title>`
 
 ```html
 head_tag.contents
 # [<title>The Dormouse's story</title>]
 ```
 
-但是<title>标签也包含一个子节点:字符串 “The Dormouse’s story”,这种情况下字符串 “The Dormouse’s story”也属于<head>标签的子孙节点. `.descendants` 属性可以对所有tag的子孙节点进行递归循环
+但是`<title>`标签也包含一个子节点:字符串 “The Dormouse’s story”,这种情况下字符串 “The Dormouse’s story”也属于'head'标签的子孙节点. `.descendants` 属性可以对所有tag的子孙节点进行递归循环
 
 ```html
 for child in head_tag.descendants:
@@ -278,7 +278,7 @@ for string in soup.stripped_strings:
 
 ### .parent
 
-通过 `.parent` 属性来获取某个元素的父节点.在例子“爱丽丝”的文档中,<head>标签是<title>标签的父节点:
+通过 `.parent` 属性来获取某个元素的父节点.在例子“爱丽丝”的文档中,`<head>`标签是`<title>`标签的父节点:
 
 ```html
 title_tag = soup.title
@@ -288,7 +288,7 @@ title_tag.parent
 # <head><title>The Dormouse's story</title></head>
 ```
 
-文档title的字符串也有父节点:<title>标签
+文档title的字符串也有父节点:`<title>`标签
 
 ```html
 title_tag.string.parent
@@ -297,7 +297,7 @@ title_tag.string.parent
 
 ### .parent
 
-通过元素的 `.parents` 属性可以递归得到元素的所有父辈节点,下面的例子使用了 `.parents` 方法遍历了<a>标签到根节点的所有节点.
+通过元素的 `.parents` 属性可以递归得到元素的所有父辈节点,下面的例子使用了 `.parents` 方法遍历了'a'标签到根节点的所有节点.
 
 ```html
 link = soup.a
@@ -334,7 +334,7 @@ print(sibling_soup.prettify())
 # </html>
 ```
 
-因为<b>标签和<c>标签是同一层:他们是同一个元素的子节点,所以<b>和<c>可以被称为兄弟节点.一段文档以标准格式输出时,兄弟节点有相同的缩进级别.在代码中也可以使用这种关系.
+因为`<b>`标签和`<c>`标签是同一层:他们是同一个元素的子节点,所以`<b>`和`<c>`可以被称为兄弟节点.一段文档以标准格式输出时,兄弟节点有相同的缩进级别.在代码中也可以使用这种关系.
 
 ### .next_sibling 和 .previous_sibling
 
@@ -358,7 +358,7 @@ print(sibling_soup.b.string.next_sibling)
 # None
 ```
 
-如果以为第一个<a>标签的 `.next_sibling` 结果是第二个<a>标签,那就错了,真实结果是第一个<a>标签和第二个<a>标签之间的顿号和换行符
+如果以为第一个`<a>`标签的 `.next_sibling` 结果是第二个`<a>`标签,那就错了,真实结果是第一个`<a>`标签和第二个`<a>`标签之间的顿号和换行符
 
 ```html
 link = soup.a
@@ -403,7 +403,7 @@ Beautiful Soup定义了很多搜索方法,这里着重介绍2个: `find()` 和 `
 
 ### 字符串
 
-最简单的过滤器是字符串.在搜索方法中传入一个字符串参数,Beautiful Soup会查找与字符串完整匹配的内容,下面的例子用于查找文档中所有的<b>标签:
+最简单的过滤器是字符串.在搜索方法中传入一个字符串参数,Beautiful Soup会查找与字符串完整匹配的内容,下面的例子用于查找文档中所有的`<b>`标签:
 
 ```html
 soup.find_all('b')
@@ -412,7 +412,7 @@ soup.find_all('b')
 
 ### 正则表达式
 
-如果传入正则表达式作为参数,Beautiful Soup会通过正则表达式的 `match()` 来匹配内容.下面例子中找出所有以b开头的标签,这表示<body>和<b>标签都应该被找到:
+如果传入正则表达式作为参数,Beautiful Soup会通过正则表达式的 `match()` 来匹配内容.下面例子中找出所有以b开头的标签,这表示`<body>`和`<b>`标签都应该被找到:
 
 ```html
 import re
@@ -424,7 +424,7 @@ for tag in soup.find_all(re.compile("^b")):
 
 ### 列表
 
-如果传入列表参数,Beautiful Soup会将与列表中任一元素匹配的内容返回.下面代码找到文档中所有<a>标签和<b>标签:
+如果传入列表参数,Beautiful Soup会将与列表中任一元素匹配的内容返回.下面代码找到文档中所有`<a>`标签和`<b>`标签:
 
 ```html
 soup.find_all(["a", "b"])
@@ -522,7 +522,7 @@ soup.find_all(text=is_the_only_string_within_a_tag)
 # [u"The Dormouse's story", u"The Dormouse's story", u'Elsie', u'Lacie', u'Tillie', u'...']
 ```
 
-虽然 `text` 参数用于搜索字符串,还可以与其它参数混合使用来过滤tag.Beautiful Soup会找到 `.string` 方法与 `text` 参数值相符的tag.下面代码用来搜索内容里面包含“Elsie”的<a>标签:
+虽然 `text` 参数用于搜索字符串,还可以与其它参数混合使用来过滤tag.Beautiful Soup会找到 `.string` 方法与 `text` 参数值相符的tag.下面代码用来搜索内容里面包含“Elsie”的`<a>`标签:
 
 ```html
 soup.find_all("a", text="Elsie")
@@ -558,7 +558,7 @@ soup.html.find_all("title", recursive=False)
 
 find( [name](https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#id32) , [attrs](https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#css) , [recursive](https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#recursive) , [text](https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#text) , [**kwargs](https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#keyword) )
 
-`find_all()` 方法将返回文档中符合条件的所有tag,尽管有时候我们只想得到一个结果.比如文档中只有一个<body>标签,那么使用 `find_all()` 方法来查找<body>标签就不太合适, 使用 `find_all` 方法并设置 `limit=1` 参数不如直接使用 `find()` 方法.下面两行代码是等价的:
+`find_all()` 方法将返回文档中符合条件的所有tag,尽管有时候我们只想得到一个结果.比如文档中只有一个`<body>`标签,那么使用 `find_all()` 方法来查找`<body>`标签就不太合适, 使用 `find_all` 方法并设置 `limit=1` 参数不如直接使用 `find()` 方法.下面两行代码是等价的:
 
 ```html
 soup.find_all('title', limit=1)
