@@ -1,0 +1,1025 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.1. 简介 &mdash; Note 0.2.2 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../search.html"/>
+    <link rel="top" title="Note 0.2.2 文档" href="../../index.html"/>
+        <link rel="up" title="1. Beautiful Soup" href="index.html"/>
+        <link rel="next" title="2. XPath" href="../XPath/index.html"/>
+        <link rel="prev" title="1. Beautiful Soup" href="index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Note
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../data_analysis/index.html">数据分析</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">爬虫</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">1. Beautiful Soup</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1.1. 简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">1.2. 对象的种类</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tag">Tag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">可以遍历的字符串</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#beautifulsoup">BeautifulSoup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">注释及特殊字符串</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">1.3. 遍历文档树</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id8">子节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">父节点</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">1.4. 搜索文档树</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id13">过滤器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#find-all">find_all()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#find">find()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id18">CSS选择器</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../XPath/index.html">2. XPath</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../machine_learning/index.html">机器学习</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../big_data/index.html">大数据</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tool/index.html">工具</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Note</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">爬虫</a> &raquo;</li>
+        
+          <li><a href="index.html">1. Beautiful Soup</a> &raquo;</li>
+        
+      <li>1.1. 简介</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/crawler/Beautifulsoup/beautifulsoup.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="contents topic" id="id1">
+<p class="topic-title first">目录</p>
+<ul class="simple">
+<li><a class="reference internal" href="#id2" id="id19">简介</a></li>
+<li><a class="reference internal" href="#id3" id="id20">对象的种类</a><ul>
+<li><a class="reference internal" href="#tag" id="id21">Tag</a><ul>
+<li><a class="reference internal" href="#name" id="id22">name</a></li>
+<li><a class="reference internal" href="#attributes" id="id23">Attributes</a></li>
+<li><a class="reference internal" href="#id4" id="id24">多值属性</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id5" id="id25">可以遍历的字符串</a></li>
+<li><a class="reference internal" href="#beautifulsoup" id="id26">BeautifulSoup</a></li>
+<li><a class="reference internal" href="#id6" id="id27">注释及特殊字符串</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id7" id="id28">遍历文档树</a><ul>
+<li><a class="reference internal" href="#id8" id="id29">子节点</a><ul>
+<li><a class="reference internal" href="#id9" id="id30">tag的名字</a></li>
+<li><a class="reference internal" href="#contents-children" id="id31">.contents 和 .children</a></li>
+<li><a class="reference internal" href="#descendants" id="id32">.descendants</a></li>
+<li><a class="reference internal" href="#string" id="id33">.string</a></li>
+<li><a class="reference internal" href="#strings-stripped-strings" id="id34">.strings 和 stripped_strings</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id10" id="id35">父节点</a><ul>
+<li><a class="reference internal" href="#parent" id="id36">.parent</a></li>
+<li><a class="reference internal" href="#id11" id="id37">.parent</a></li>
+<li><a class="reference internal" href="#next-sibling-previous-sibling" id="id38">.next_sibling 和 .previous_sibling</a></li>
+<li><a class="reference internal" href="#next-siblings-previous-siblings" id="id39">.next_siblings 和 .previous_siblings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id12" id="id40">搜索文档树</a><ul>
+<li><a class="reference internal" href="#id13" id="id41">过滤器</a><ul>
+<li><a class="reference internal" href="#id14" id="id42">字符串</a></li>
+<li><a class="reference internal" href="#id15" id="id43">正则表达式</a></li>
+<li><a class="reference internal" href="#id16" id="id44">列表</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#find-all" id="id45">find_all()</a><ul>
+<li><a class="reference internal" href="#id17" id="id46">name 参数</a></li>
+<li><a class="reference internal" href="#keyword" id="id47">keyword 参数</a></li>
+<li><a class="reference internal" href="#css" id="id48">按CSS搜索</a></li>
+<li><a class="reference internal" href="#text" id="id49"><code class="docutils literal"><span class="pre">text</span></code> 参数</a></li>
+<li><a class="reference internal" href="#recursive" id="id50"><code class="docutils literal"><span class="pre">recursive</span></code> 参数</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#find" id="id51">find()</a></li>
+<li><a class="reference internal" href="#id18" id="id52">CSS选择器</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h1><a class="toc-backref" href="#id19">1.1. 简介</a><a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h1>
+<p>本文主要介绍Beautifulsoup的用法，通过解析以下html示例代码来完成介绍：</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">html_doc</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;html&gt;&lt;head&gt;&lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;&lt;/head&gt;</span>
+<span class="s2">&lt;body&gt;</span>
+<span class="s2">&lt;p class=&quot;title&quot;&gt;&lt;b&gt;The Dormouse&#39;s story&lt;/b&gt;&lt;/p&gt;</span>
+
+<span class="s2">&lt;p class=&quot;story&quot;&gt;Once upon a time there were three little sisters; and their names were</span>
+<span class="s2">&lt;a href=&quot;http://example.com/elsie&quot; class=&quot;sister&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span>
+<span class="s2">&lt;a href=&quot;http://example.com/lacie&quot; class=&quot;sister&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt; and</span>
+<span class="s2">&lt;a href=&quot;http://example.com/tillie&quot; class=&quot;sister&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;;</span>
+<span class="s2">and they lived at the bottom of a well.&lt;/p&gt;</span>
+
+<span class="s2">&lt;p class=&quot;story&quot;&gt;...&lt;/p&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h1><a class="toc-backref" href="#id20">1.2. 对象的种类</a><a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h1>
+<p>Beautiful
+Soup将复杂HTML文档转换成一个复杂的树形结构,每个节点都是Python对象,所有对象可以归纳为4种:
+<code class="docutils literal"><span class="pre">Tag</span></code> , <code class="docutils literal"><span class="pre">NavigableString</span></code> , <code class="docutils literal"><span class="pre">BeautifulSoup</span></code> , <code class="docutils literal"><span class="pre">Comment</span></code></p>
+<div class="section" id="tag">
+<h2><a class="toc-backref" href="#id21">Tag</a><a class="headerlink" href="#tag" title="永久链接至标题">¶</a></h2>
+<p>Tag有很多方法和属性,在
+<a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#id15">遍历文档树</a>
+和
+<a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#id24">搜索文档树</a>
+中有详细解释.现在介绍一下tag中最重要的属性: name和attributes</p>
+<div class="section" id="name">
+<h3><a class="toc-backref" href="#id22">name</a><a class="headerlink" href="#name" title="永久链接至标题">¶</a></h3>
+<p>每个tag都有自己的名字,通过 <code class="docutils literal"><span class="pre">.name</span></code> 来获取:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">tag</span><span class="o">.</span><span class="n">name</span>
+<span class="c1"># u&#39;b&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="attributes">
+<h3><a class="toc-backref" href="#id23">Attributes</a><a class="headerlink" href="#attributes" title="永久链接至标题">¶</a></h3>
+<p>一个tag可能有很多个属性. tag <code class="docutils literal"><span class="pre">&lt;b</span> <span class="pre">class=&quot;boldest&quot;&gt;</span></code> 有一个 “class”
+的属性,值为 “boldest” . tag的属性的操作方法与字典相同:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">tag</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span>
+<span class="c1"># u&#39;boldest&#39;</span>
+</pre></div>
+</div>
+<p>也可以直接”点”取属性, 比如: <code class="docutils literal"><span class="pre">.attrs</span></code> :</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">tag</span><span class="o">.</span><span class="n">attrs</span>
+<span class="c1"># {u&#39;class&#39;: u&#39;boldest&#39;}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3><a class="toc-backref" href="#id24">多值属性</a><a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p>HTML
+4定义了一系列可以包含多个值的属性.在HTML5中移除了一些,却增加更多.最常见的多值的属性是
+class (一个tag可以有多个CSS的class). 还有一些属性 <code class="docutils literal"><span class="pre">rel</span></code> , <code class="docutils literal"><span class="pre">rev</span></code> ,
+<code class="docutils literal"><span class="pre">accept-charset</span></code> , <code class="docutils literal"><span class="pre">headers</span></code> , <code class="docutils literal"><span class="pre">accesskey</span></code> . 在Beautiful
+Soup中多值属性的返回类型是list</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">css_soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="s1">&#39;&lt;p class=&quot;body strikeout&quot;&gt;&lt;/p&gt;&#39;</span><span class="p">)</span>
+<span class="n">css_soup</span><span class="o">.</span><span class="n">p</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span>
+<span class="c1"># [&quot;body&quot;, &quot;strikeout&quot;]</span>
+
+<span class="n">css_soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="s1">&#39;&lt;p class=&quot;body&quot;&gt;&lt;/p&gt;&#39;</span><span class="p">)</span>
+<span class="n">css_soup</span><span class="o">.</span><span class="n">p</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span>
+<span class="c1"># [&quot;body&quot;]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2><a class="toc-backref" href="#id25">可以遍历的字符串</a><a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>字符串常被包含在tag内.Beautiful Soup用 <code class="docutils literal"><span class="pre">NavigableString</span></code>
+类来包装tag中的字符串:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">tag</span><span class="o">.</span><span class="n">string</span>
+<span class="c1"># u&#39;Extremely bold&#39;</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">string</span><span class="p">)</span>
+<span class="c1"># &lt;class &#39;bs4.element.NavigableString&#39;&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="beautifulsoup">
+<h2><a class="toc-backref" href="#id26">BeautifulSoup</a><a class="headerlink" href="#beautifulsoup" title="永久链接至标题">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">BeautifulSoup</span></code> 对象表示的是一个文档的全部内容.大部分时候,可以把它当作
+<code class="docutils literal"><span class="pre">Tag</span></code> 对象,它支持
+<a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#id15">遍历文档树</a>
+和
+<a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#id24">搜索文档树</a>
+中描述的大部分的方法.</p>
+<p>因为 <code class="docutils literal"><span class="pre">BeautifulSoup</span></code>
+对象并不是真正的HTML或XML的tag,所以它没有name和attribute属性.但有时查看它的
+<code class="docutils literal"><span class="pre">.name</span></code> 属性是很方便的,所以 <code class="docutils literal"><span class="pre">BeautifulSoup</span></code> 对象包含了一个值为
+“[document]” 的特殊属性 <code class="docutils literal"><span class="pre">.name</span></code></p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">name</span>
+<span class="c1"># u&#39;[document]&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2><a class="toc-backref" href="#id27">注释及特殊字符串</a><a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">Tag</span></code> , <code class="docutils literal"><span class="pre">NavigableString</span></code> , <code class="docutils literal"><span class="pre">BeautifulSoup</span></code>
+几乎覆盖了html和xml中的所有内容,但是还有一些特殊对象.容易让人担心的内容是文档的注释部分:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">markup</span> <span class="o">=</span> <span class="s2">&quot;&lt;b&gt;&lt;!--Hey, buddy. Want to buy a used parser?--&gt;&lt;/b&gt;&quot;</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">markup</span><span class="p">)</span>
+<span class="n">comment</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">string</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">comment</span><span class="p">)</span>
+<span class="c1"># &lt;class &#39;bs4.element.Comment&#39;&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id7">
+<h1><a class="toc-backref" href="#id28">1.3. 遍历文档树</a><a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id8">
+<h2><a class="toc-backref" href="#id29">子节点</a><a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
+<p>一个Tag可能包含多个字符串或其它的Tag,这些都是这个Tag的子节点.Beautiful
+Soup提供了许多操作和遍历子节点的属性.</p>
+<p>注意: Beautiful Soup中字符串节点不支持这些属性,因为字符串没有子节点</p>
+<div class="section" id="id9">
+<h3><a class="toc-backref" href="#id30">tag的名字</a><a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+<p>操作文档树最简单的方法就是告诉它你想获取的tag的name.如果想获取
+<code class="docutils literal"><span class="pre">&lt;head&gt;</span></code> 标签,只要用 <code class="docutils literal"><span class="pre">soup.head</span></code> :</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">head</span>
+<span class="c1"># &lt;head&gt;&lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;&lt;/head&gt;</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">title</span>
+<span class="c1"># &lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;</span>
+</pre></div>
+</div>
+<p>这是个获取tag的小窍门,可以在文档树的tag中多次调用这个方法.下面的代码可以获取<code class="docutils literal"><span class="pre">&lt;body&gt;</span></code>标签中的第一个<code class="docutils literal"><span class="pre">&lt;b&gt;</span></code>标签:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">b</span>
+<span class="c1"># &lt;b&gt;The Dormouse&#39;s story&lt;/b&gt;</span>
+</pre></div>
+</div>
+<p>通过点取属性的方式只能获得当前名字的第一个tag:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">a</span>
+<span class="c1"># &lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;</span>
+</pre></div>
+</div>
+<p>如果想要得到所有的<code class="docutils literal"><span class="pre">&lt;a&gt;</span></code>标签,或是通过名字得到比一个tag更多的内容的时候,就需要用到
+Searching the tree 中描述的方法,比如: <code class="docutils literal"><span class="pre">find_all()</span></code></p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="contents-children">
+<h3><a class="toc-backref" href="#id31">.contents 和 .children</a><a class="headerlink" href="#contents-children" title="永久链接至标题">¶</a></h3>
+<p>tag的 <code class="docutils literal"><span class="pre">.contents</span></code> 属性可以将tag的子节点以列表的方式输出:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">head_tag</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">head</span>
+<span class="n">head_tag</span>
+<span class="c1"># &lt;head&gt;&lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;&lt;/head&gt;</span>
+
+<span class="n">head_tag</span><span class="o">.</span><span class="n">contents</span>
+<span class="p">[</span><span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="n">The</span> <span class="n">Dormouse</span><span class="s1">&#39;s story&lt;/title&gt;]</span>
+
+<span class="n">title_tag</span> <span class="o">=</span> <span class="n">head_tag</span><span class="o">.</span><span class="n">contents</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">title_tag</span>
+<span class="c1"># &lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;</span>
+<span class="n">title_tag</span><span class="o">.</span><span class="n">contents</span>
+<span class="c1"># [u&#39;The Dormouse&#39;s story&#39;]</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">BeautifulSoup</span></code>
+对象本身一定会包含子节点,也就是说,<code class="docutils literal"><span class="pre">&lt;html&gt;</span></code>标签也是
+<code class="docutils literal"><span class="pre">BeautifulSoup</span></code> 对象的子节点:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">contents</span><span class="p">)</span>
+<span class="c1"># 1</span>
+<span class="n">soup</span><span class="o">.</span><span class="n">contents</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
+<span class="c1"># u&#39;html&#39;</span>
+</pre></div>
+</div>
+<p>字符串没有 <code class="docutils literal"><span class="pre">.contents</span></code> 属性,因为字符串没有子节点:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="n">title_tag</span><span class="o">.</span><span class="n">contents</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">text</span><span class="o">.</span><span class="n">contents</span>
+<span class="c1"># AttributeError: &#39;NavigableString&#39; object has no attribute &#39;contents&#39;</span>
+</pre></div>
+</div>
+<p>通过tag的 <code class="docutils literal"><span class="pre">.children</span></code> 生成器,可以对tag的子节点进行循环:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">title_tag</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
+    <span class="c1"># The Dormouse&#39;s story</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="descendants">
+<h3><a class="toc-backref" href="#id32">.descendants</a><a class="headerlink" href="#descendants" title="永久链接至标题">¶</a></h3>
+<p><code class="docutils literal"><span class="pre">.contents</span></code> 和 <code class="docutils literal"><span class="pre">.children</span></code>
+属性仅包含tag的直接子节点.例如,<code class="docutils literal"><span class="pre">&lt;head&gt;</span></code>标签只有一个直接子节点<code class="docutils literal"><span class="pre">&lt;title&gt;</span></code></p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">head_tag</span><span class="o">.</span><span class="n">contents</span>
+<span class="c1"># [&lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;]</span>
+</pre></div>
+</div>
+<p>但是<code class="docutils literal"><span class="pre">&lt;title&gt;</span></code>标签也包含一个子节点:字符串 “The Dormouse’s
+story”,这种情况下字符串 “The Dormouse’s
+story”也属于’head’标签的子孙节点. <code class="docutils literal"><span class="pre">.descendants</span></code>
+属性可以对所有tag的子孙节点进行递归循环</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">head_tag</span><span class="o">.</span><span class="n">descendants</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
+    <span class="c1"># &lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;</span>
+    <span class="c1"># The Dormouse&#39;s story</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="string">
+<h3><a class="toc-backref" href="#id33">.string</a><a class="headerlink" href="#string" title="永久链接至标题">¶</a></h3>
+<p>如果tag只有一个 <code class="docutils literal"><span class="pre">NavigableString</span></code> 类型子节点,那么这个tag可以使用
+<code class="docutils literal"><span class="pre">.string</span></code> 得到子节点:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">title_tag</span><span class="o">.</span><span class="n">string</span>
+<span class="c1"># u&#39;The Dormouse&#39;s story&#39;</span>
+</pre></div>
+</div>
+<p>如果一个tag仅有一个子节点,那么这个tag也可以使用 <code class="docutils literal"><span class="pre">.string</span></code>
+方法,输出结果与当前唯一子节点的 <code class="docutils literal"><span class="pre">.string</span></code> 结果相同:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">head_tag</span><span class="o">.</span><span class="n">contents</span>
+<span class="c1"># [&lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;]</span>
+
+<span class="n">head_tag</span><span class="o">.</span><span class="n">string</span>
+<span class="c1"># u&#39;The Dormouse&#39;s story&#39;</span>
+</pre></div>
+</div>
+<p>如果tag包含了多个子节点,tag就无法确定 <code class="docutils literal"><span class="pre">.string</span></code>
+方法应该调用哪个子节点的内容, <code class="docutils literal"><span class="pre">.string</span></code> 的输出结果是 <code class="docutils literal"><span class="pre">None</span></code> :</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">html</span><span class="o">.</span><span class="n">string</span><span class="p">)</span>
+<span class="c1"># None</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="strings-stripped-strings">
+<h3><a class="toc-backref" href="#id34">.strings 和 stripped_strings</a><a class="headerlink" href="#strings-stripped-strings" title="永久链接至标题">¶</a></h3>
+<p>如果tag中包含多个字符串 ,可以使用 <code class="docutils literal"><span class="pre">.strings</span></code> 来循环获取:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">string</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">strings</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">string</span><span class="p">))</span>
+    <span class="c1"># u&quot;The Dormouse&#39;s story&quot;</span>
+    <span class="c1"># u&#39;\n\n&#39;</span>
+    <span class="c1"># u&quot;The Dormouse&#39;s story&quot;</span>
+    <span class="c1"># u&#39;\n\n&#39;</span>
+    <span class="c1"># u&#39;Once upon a time there were three little sisters; and their names were\n&#39;</span>
+    <span class="c1"># u&#39;Elsie&#39;</span>
+    <span class="c1"># u&#39;,\n&#39;</span>
+    <span class="c1"># u&#39;Lacie&#39;</span>
+    <span class="c1"># u&#39; and\n&#39;</span>
+    <span class="c1"># u&#39;Tillie&#39;</span>
+    <span class="c1"># u&#39;;\nand they lived at the bottom of a well.&#39;</span>
+    <span class="c1"># u&#39;\n\n&#39;</span>
+    <span class="c1"># u&#39;...&#39;</span>
+    <span class="c1"># u&#39;\n&#39;</span>
+</pre></div>
+</div>
+<p>输出的字符串中可能包含了很多空格或空行,使用 <code class="docutils literal"><span class="pre">.stripped_strings</span></code>
+可以去除多余空白内容:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">string</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">stripped_strings</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">string</span><span class="p">))</span>
+    <span class="c1"># u&quot;The Dormouse&#39;s story&quot;</span>
+    <span class="c1"># u&quot;The Dormouse&#39;s story&quot;</span>
+    <span class="c1"># u&#39;Once upon a time there were three little sisters; and their names were&#39;</span>
+    <span class="c1"># u&#39;Elsie&#39;</span>
+    <span class="c1"># u&#39;,&#39;</span>
+    <span class="c1"># u&#39;Lacie&#39;</span>
+    <span class="c1"># u&#39;and&#39;</span>
+    <span class="c1"># u&#39;Tillie&#39;</span>
+    <span class="c1"># u&#39;;\nand they lived at the bottom of a well.&#39;</span>
+    <span class="c1"># u&#39;...&#39;</span>
+</pre></div>
+</div>
+<p>全部是空格的行会被忽略掉,段首和段末的空白会被删除</p>
+</div>
+</div>
+<div class="section" id="id10">
+<h2><a class="toc-backref" href="#id35">父节点</a><a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+<p>继续分析文档树,每个tag或字符串都有父节点:被包含在某个tag中</p>
+<div class="section" id="parent">
+<h3><a class="toc-backref" href="#id36">.parent</a><a class="headerlink" href="#parent" title="永久链接至标题">¶</a></h3>
+<p>通过 <code class="docutils literal"><span class="pre">.parent</span></code>
+属性来获取某个元素的父节点.在例子“爱丽丝”的文档中,<code class="docutils literal"><span class="pre">&lt;head&gt;</span></code>标签是<code class="docutils literal"><span class="pre">&lt;title&gt;</span></code>标签的父节点:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">title_tag</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">title</span>
+<span class="n">title_tag</span>
+<span class="c1"># &lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;</span>
+<span class="n">title_tag</span><span class="o">.</span><span class="n">parent</span>
+<span class="c1"># &lt;head&gt;&lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;&lt;/head&gt;</span>
+</pre></div>
+</div>
+<p>文档title的字符串也有父节点:<code class="docutils literal"><span class="pre">&lt;title&gt;</span></code>标签</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">title_tag</span><span class="o">.</span><span class="n">string</span><span class="o">.</span><span class="n">parent</span>
+<span class="c1"># &lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id11">
+<h3><a class="toc-backref" href="#id37">.parent</a><a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+<p>通过元素的 <code class="docutils literal"><span class="pre">.parents</span></code>
+属性可以递归得到元素的所有父辈节点,下面的例子使用了 <code class="docutils literal"><span class="pre">.parents</span></code>
+方法遍历了’a’标签到根节点的所有节点.</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">link</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">a</span>
+<span class="n">link</span>
+<span class="c1"># &lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;</span>
+<span class="k">for</span> <span class="n">parent</span> <span class="ow">in</span> <span class="n">link</span><span class="o">.</span><span class="n">parents</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">parent</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">parent</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="c1"># p</span>
+<span class="c1"># body</span>
+<span class="c1"># html</span>
+<span class="c1"># [document]</span>
+<span class="c1"># None</span>
+</pre></div>
+</div>
+<p>看一段简单的例子:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">sibling_soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="s2">&quot;&lt;a&gt;&lt;b&gt;text1&lt;/b&gt;&lt;c&gt;text2&lt;/c&gt;&lt;/b&gt;&lt;/a&gt;&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sibling_soup</span><span class="o">.</span><span class="n">prettify</span><span class="p">())</span>
+<span class="c1"># &lt;html&gt;</span>
+<span class="c1">#  &lt;body&gt;</span>
+<span class="c1">#   &lt;a&gt;</span>
+<span class="c1">#    &lt;b&gt;</span>
+<span class="c1">#     text1</span>
+<span class="c1">#    &lt;/b&gt;</span>
+<span class="c1">#    &lt;c&gt;</span>
+<span class="c1">#     text2</span>
+<span class="c1">#    &lt;/c&gt;</span>
+<span class="c1">#   &lt;/a&gt;</span>
+<span class="c1">#  &lt;/body&gt;</span>
+<span class="c1"># &lt;/html&gt;</span>
+</pre></div>
+</div>
+<p>因为<code class="docutils literal"><span class="pre">&lt;b&gt;</span></code>标签和<code class="docutils literal"><span class="pre">&lt;c&gt;</span></code>标签是同一层:他们是同一个元素的子节点,所以<code class="docutils literal"><span class="pre">&lt;b&gt;</span></code>和<code class="docutils literal"><span class="pre">&lt;c&gt;</span></code>可以被称为兄弟节点.一段文档以标准格式输出时,兄弟节点有相同的缩进级别.在代码中也可以使用这种关系.</p>
+</div>
+<div class="section" id="next-sibling-previous-sibling">
+<h3><a class="toc-backref" href="#id38">.next_sibling 和 .previous_sibling</a><a class="headerlink" href="#next-sibling-previous-sibling" title="永久链接至标题">¶</a></h3>
+<p>在文档树中,使用 <code class="docutils literal"><span class="pre">.next_sibling</span></code> 和 <code class="docutils literal"><span class="pre">.previous_sibling</span></code>
+属性来查询兄弟节点:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">sibling_soup</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">next_sibling</span>
+<span class="c1"># &lt;c&gt;text2&lt;/c&gt;</span>
+
+<span class="n">sibling_soup</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">previous_sibling</span>
+<span class="c1"># &lt;b&gt;text1&lt;/b&gt;</span>
+</pre></div>
+</div>
+<p>例子中的字符串“text1”和“text2”不是兄弟节点,因为它们的父节点不同:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">sibling_soup</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">string</span>
+<span class="c1"># u&#39;text1&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sibling_soup</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">string</span><span class="o">.</span><span class="n">next_sibling</span><span class="p">)</span>
+<span class="c1"># None</span>
+</pre></div>
+</div>
+<p>如果以为第一个<code class="docutils literal"><span class="pre">&lt;a&gt;</span></code>标签的 <code class="docutils literal"><span class="pre">.next_sibling</span></code>
+结果是第二个<code class="docutils literal"><span class="pre">&lt;a&gt;</span></code>标签,那就错了,真实结果是第一个<code class="docutils literal"><span class="pre">&lt;a&gt;</span></code>标签和第二个<code class="docutils literal"><span class="pre">&lt;a&gt;</span></code>标签之间的顿号和换行符</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">link</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">a</span>
+<span class="n">link</span>
+<span class="c1"># &lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;</span>
+
+<span class="n">link</span><span class="o">.</span><span class="n">next_sibling</span>
+<span class="c1"># u&#39;,\n&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="next-siblings-previous-siblings">
+<h3><a class="toc-backref" href="#id39">.next_siblings 和 .previous_siblings</a><a class="headerlink" href="#next-siblings-previous-siblings" title="永久链接至标题">¶</a></h3>
+<p>通过 <code class="docutils literal"><span class="pre">.next_siblings</span></code> 和 <code class="docutils literal"><span class="pre">.previous_siblings</span></code>
+属性可以对当前节点的兄弟节点迭代输出:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">sibling</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">next_siblings</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">sibling</span><span class="p">))</span>
+    <span class="c1"># u&#39;,\n&#39;</span>
+    <span class="c1"># &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;</span>
+    <span class="c1"># u&#39; and\n&#39;</span>
+    <span class="c1"># &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;</span>
+    <span class="c1"># u&#39;; and they lived at the bottom of a well.&#39;</span>
+    <span class="c1"># None</span>
+
+<span class="k">for</span> <span class="n">sibling</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;link3&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">previous_siblings</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">sibling</span><span class="p">))</span>
+    <span class="c1"># &#39; and\n&#39;</span>
+    <span class="c1"># &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;</span>
+    <span class="c1"># u&#39;,\n&#39;</span>
+    <span class="c1"># &lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;</span>
+    <span class="c1"># u&#39;Once upon a time there were three little sisters; and their names were\n&#39;</span>
+    <span class="c1"># None</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id12">
+<h1><a class="toc-backref" href="#id40">1.4. 搜索文档树</a><a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h1>
+<p>Beautiful Soup定义了很多搜索方法,这里着重介绍2个: <code class="docutils literal"><span class="pre">find()</span></code> 和
+<code class="docutils literal"><span class="pre">find_all()</span></code></p>
+<div class="section" id="id13">
+<h2><a class="toc-backref" href="#id41">过滤器</a><a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h2>
+<p>介绍 <code class="docutils literal"><span class="pre">find_all()</span></code> 方法前,先介绍一下过滤器的类型
+,这些过滤器贯穿整个搜索的API.过滤器可以被用在tag的name中,节点的属性中,字符串中或他们的混合中.</p>
+<div class="section" id="id14">
+<h3><a class="toc-backref" href="#id42">字符串</a><a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
+<p>最简单的过滤器是字符串.在搜索方法中传入一个字符串参数,Beautiful
+Soup会查找与字符串完整匹配的内容,下面的例子用于查找文档中所有的<code class="docutils literal"><span class="pre">&lt;b&gt;</span></code>标签:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="c1"># [&lt;b&gt;The Dormouse&#39;s story&lt;/b&gt;]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id15">
+<h3><a class="toc-backref" href="#id43">正则表达式</a><a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<p>如果传入正则表达式作为参数,Beautiful Soup会通过正则表达式的 <code class="docutils literal"><span class="pre">match()</span></code>
+来匹配内容.下面例子中找出所有以b开头的标签,这表示<code class="docutils literal"><span class="pre">&lt;body&gt;</span></code>和<code class="docutils literal"><span class="pre">&lt;b&gt;</span></code>标签都应该被找到:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+<span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;^b&quot;</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="c1"># body</span>
+<span class="c1"># b</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id16">
+<h3><a class="toc-backref" href="#id44">列表</a><a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
+<p>如果传入列表参数,Beautiful
+Soup会将与列表中任一元素匹配的内容返回.下面代码找到文档中所有<code class="docutils literal"><span class="pre">&lt;a&gt;</span></code>标签和<code class="docutils literal"><span class="pre">&lt;b&gt;</span></code>标签:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">([</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">])</span>
+<span class="c1"># [&lt;b&gt;The Dormouse&#39;s story&lt;/b&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="find-all">
+<h2><a class="toc-backref" href="#id45">find_all()</a><a class="headerlink" href="#find-all" title="永久链接至标题">¶</a></h2>
+<p>find_all(
+<a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#id32">name</a>
+,
+<a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#css">attrs</a>
+,
+<a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#recursive">recursive</a>
+,
+<a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#text">text</a>
+,
+<a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#keyword">**kwargs</a>
+)</p>
+<p><code class="docutils literal"><span class="pre">find_all()</span></code>
+方法搜索当前tag的所有tag子节点,并判断是否符合过滤器的条件.这里有几个例子:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">,</span> <span class="s2">&quot;title&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;p class=&quot;title&quot;&gt;&lt;b&gt;The Dormouse&#39;s story&lt;/b&gt;&lt;/p&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;link2&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;]</span>
+
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;sisters&quot;</span><span class="p">))</span>
+<span class="c1"># u&#39;Once upon a time there were three little sisters; and their names were\n&#39;</span>
+</pre></div>
+</div>
+<div class="section" id="id17">
+<h3><a class="toc-backref" href="#id46">name 参数</a><a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
+<p><code class="docutils literal"><span class="pre">name</span></code> 参数可以查找所有名字为 <code class="docutils literal"><span class="pre">name</span></code> 的tag,字符串对象会被自动忽略掉.</p>
+<p>简单的用法如下:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;]</span>
+</pre></div>
+</div>
+<p>重申: 搜索 <code class="docutils literal"><span class="pre">name</span></code> 参数的值可以使任一类型的
+<a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#id25">过滤器</a>
+,字符窜,正则表达式,列表,方法或是 <code class="docutils literal"><span class="pre">True</span></code></p>
+</div>
+<div class="section" id="keyword">
+<h3><a class="toc-backref" href="#id47">keyword 参数</a><a class="headerlink" href="#keyword" title="永久链接至标题">¶</a></h3>
+<p>如果一个指定名字的参数不是搜索内置的参数名,搜索时会把该参数当作指定名字tag的属性来搜索,如果包含一个名字为
+<code class="docutils literal"><span class="pre">id</span></code> 的参数,Beautiful Soup会搜索每个tag的”id”属性.</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">&#39;link2&#39;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;]</span>
+</pre></div>
+</div>
+<p>可以通过 <code class="docutils literal"><span class="pre">find_all()</span></code> 方法的 <code class="docutils literal"><span class="pre">attrs</span></code>
+参数定义一个字典参数来搜索包含特殊属性的tag:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">data_soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">attrs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;data-foo&quot;</span><span class="p">:</span> <span class="s2">&quot;value&quot;</span><span class="p">})</span>
+<span class="c1"># [&lt;div data-foo=&quot;value&quot;&gt;foo!&lt;/div&gt;]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="css">
+<h3><a class="toc-backref" href="#id48">按CSS搜索</a><a class="headerlink" href="#css" title="永久链接至标题">¶</a></h3>
+<p>按照CSS类名搜索tag的功能非常实用,但标识CSS类名的关键字 <code class="docutils literal"><span class="pre">class</span></code>
+在Python中是保留字,使用 <code class="docutils literal"><span class="pre">class</span></code> 做参数会导致语法错误.从Beautiful
+Soup的4.1.1版本开始,可以通过 <code class="docutils literal"><span class="pre">class_</span></code> 参数搜索有指定CSS类名的tag:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;sister&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="text">
+<h3><a class="toc-backref" href="#id49"><code class="docutils literal"><span class="pre">text</span></code> 参数</a><a class="headerlink" href="#text" title="永久链接至标题">¶</a></h3>
+<p>通过 <code class="docutils literal"><span class="pre">text</span></code> 参数可以搜搜文档中的字符串内容.与 <code class="docutils literal"><span class="pre">name</span></code>
+参数的可选值一样, <code class="docutils literal"><span class="pre">text</span></code> 参数接受
+<a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#id27">字符串</a>
+,
+<a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#id28">正则表达式</a>
+,
+<a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#id29">列表</a>,
+<a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#true">True</a>
+. 看例子:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Elsie&quot;</span><span class="p">)</span>
+<span class="c1"># [u&#39;Elsie&#39;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Tillie&quot;</span><span class="p">,</span> <span class="s2">&quot;Elsie&quot;</span><span class="p">,</span> <span class="s2">&quot;Lacie&quot;</span><span class="p">])</span>
+<span class="c1"># [u&#39;Elsie&#39;, u&#39;Lacie&#39;, u&#39;Tillie&#39;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;Dormouse&quot;</span><span class="p">))</span>
+<span class="p">[</span><span class="sa">u</span><span class="s2">&quot;The Dormouse&#39;s story&quot;</span><span class="p">,</span> <span class="sa">u</span><span class="s2">&quot;The Dormouse&#39;s story&quot;</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">is_the_only_string_within_a_tag</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="s2">&quot;&quot;</span><span class="n">Return</span> <span class="kc">True</span> <span class="k">if</span> <span class="n">this</span> <span class="n">string</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">only</span> <span class="n">child</span> <span class="n">of</span> <span class="n">its</span> <span class="n">parent</span> <span class="n">tag</span><span class="o">.</span><span class="s2">&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">s</span> <span class="o">==</span> <span class="n">s</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">string</span><span class="p">)</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">is_the_only_string_within_a_tag</span><span class="p">)</span>
+<span class="c1"># [u&quot;The Dormouse&#39;s story&quot;, u&quot;The Dormouse&#39;s story&quot;, u&#39;Elsie&#39;, u&#39;Lacie&#39;, u&#39;Tillie&#39;, u&#39;...&#39;]</span>
+</pre></div>
+</div>
+<p>虽然 <code class="docutils literal"><span class="pre">text</span></code>
+参数用于搜索字符串,还可以与其它参数混合使用来过滤tag.Beautiful
+Soup会找到 <code class="docutils literal"><span class="pre">.string</span></code> 方法与 <code class="docutils literal"><span class="pre">text</span></code>
+参数值相符的tag.下面代码用来搜索内容里面包含“Elsie”的<code class="docutils literal"><span class="pre">&lt;a&gt;</span></code>标签:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Elsie&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;a href=&quot;http://example.com/elsie&quot; class=&quot;sister&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="recursive">
+<h3><a class="toc-backref" href="#id50"><code class="docutils literal"><span class="pre">recursive</span></code> 参数</a><a class="headerlink" href="#recursive" title="永久链接至标题">¶</a></h3>
+<p>调用tag的 <code class="docutils literal"><span class="pre">find_all()</span></code> 方法时,Beautiful
+Soup会检索当前tag的所有子孙节点,如果只想搜索tag的直接子节点,可以使用参数
+<code class="docutils literal"><span class="pre">recursive=False</span></code> .</p>
+<p>一段简单的文档:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">html</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span>
+   <span class="n">The</span> <span class="n">Dormouse</span><span class="s1">&#39;s story</span>
+  <span class="o">&lt;/</span><span class="n">title</span><span class="o">&gt;</span>
+ <span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>是否使用 <code class="docutils literal"><span class="pre">recursive</span></code> 参数的搜索结果:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">html</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">html</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="c1"># []</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="find">
+<h2><a class="toc-backref" href="#id51">find()</a><a class="headerlink" href="#find" title="永久链接至标题">¶</a></h2>
+<p>find(
+<a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#id32">name</a>
+,
+<a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#css">attrs</a>
+,
+<a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#recursive">recursive</a>
+,
+<a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#text">text</a>
+,
+<a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#keyword">**kwargs</a>
+)</p>
+<p><code class="docutils literal"><span class="pre">find_all()</span></code>
+方法将返回文档中符合条件的所有tag,尽管有时候我们只想得到一个结果.比如文档中只有一个<code class="docutils literal"><span class="pre">&lt;body&gt;</span></code>标签,那么使用
+<code class="docutils literal"><span class="pre">find_all()</span></code> 方法来查找<code class="docutils literal"><span class="pre">&lt;body&gt;</span></code>标签就不太合适, 使用 <code class="docutils literal"><span class="pre">find_all</span></code>
+方法并设置 <code class="docutils literal"><span class="pre">limit=1</span></code> 参数不如直接使用 <code class="docutils literal"><span class="pre">find()</span></code>
+方法.下面两行代码是等价的:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1"># [&lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">)</span>
+<span class="c1"># &lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;</span>
+</pre></div>
+</div>
+<p>唯一的区别是 <code class="docutils literal"><span class="pre">find_all()</span></code> 方法的返回结果是值包含一个元素的列表,而
+<code class="docutils literal"><span class="pre">find()</span></code> 方法直接返回结果.</p>
+<p><code class="docutils literal"><span class="pre">find_all()</span></code> 方法没有找到目标是返回空列表, <code class="docutils literal"><span class="pre">find()</span></code>
+方法找不到目标时,返回 <code class="docutils literal"><span class="pre">None</span></code> .</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;nosuchtag&quot;</span><span class="p">))</span>
+<span class="c1"># None</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">soup.head.title</span></code> 是
+<a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#id17">tag的名字</a>
+方法的简写.这个简写的原理就是多次调用当前tag的 <code class="docutils literal"><span class="pre">find()</span></code> 方法:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">title</span>
+<span class="c1"># &lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;head&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">)</span>
+<span class="c1"># &lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id18">
+<h2><a class="toc-backref" href="#id52">CSS选择器</a><a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h2>
+<p>Beautiful Soup支持大部分的CSS选择器 ,在 <code class="docutils literal"><span class="pre">Tag</span></code> 或 <code class="docutils literal"><span class="pre">BeautifulSoup</span></code>
+对象的 <code class="docutils literal"><span class="pre">.select()</span></code>
+方法中传入字符串参数,即可使用CSS选择器的语法找到tag:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;p nth-of-type(3)&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;p class=&quot;story&quot;&gt;...&lt;/p&gt;]</span>
+</pre></div>
+</div>
+<p>通过tag标签逐层查找:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;body a&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot;  id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;html head title&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;]</span>
+</pre></div>
+</div>
+<p>找到某个tag标签下的直接子标签：</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;head &gt; title&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;p &gt; a&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot;  id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;p &gt; a:nth-of-type(2)&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;p &gt; #link1&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;body &gt; a&quot;</span><span class="p">)</span>
+<span class="c1"># []</span>
+</pre></div>
+</div>
+<p>找到兄弟节点标签:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;#link1 ~ .sister&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot;  id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;#link1 + .sister&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;]</span>
+</pre></div>
+</div>
+<p>通过CSS的类名查找:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;.sister&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;[class~=sister]&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span>
+</pre></div>
+</div>
+<p>通过tag的id查找:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;#link1&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;a#link2&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;]</span>
+</pre></div>
+</div>
+<p>通过是否存在某个属性来查找:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;a[href]&#39;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span>
+</pre></div>
+</div>
+<p>通过属性的值来查找:</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;a[href=&quot;http://example.com/elsie&quot;]&#39;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;a[href^=&quot;http://example.com/&quot;]&#39;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;a[href$=&quot;tillie&quot;]&#39;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;a[href*=&quot;.com/el&quot;]&#39;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;]</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../XPath/index.html" class="btn btn-neutral float-right" title="2. XPath" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="1. Beautiful Soup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Wvv.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.2.2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,494 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. 简介 &mdash; Note 0.2.2 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../search.html"/>
+    <link rel="top" title="Note 0.2.2 文档" href="../../index.html"/>
+        <link rel="up" title="Mysql" href="index.html"/>
+        <link rel="next" title="Python" href="../python/index.html"/>
+        <link rel="prev" title="Mysql" href="index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Note
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">数据分析</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../linux/index.html">Linux</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Mysql</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1. 简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">2. 数据库操作</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">3. 数据表操作</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../python/index.html">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jupyter/index.html">Jupyter</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../machine_learning/index.html">机器学习</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../big_data/index.html">大数据</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tool/index.html">工具</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Note</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">数据分析</a> &raquo;</li>
+        
+          <li><a href="index.html">Mysql</a> &raquo;</li>
+        
+      <li>1. 简介</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/data_analysis/mysql/hello_new.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="contents topic" id="id1">
+<p class="topic-title first">目录</p>
+<ul class="simple">
+<li><a class="reference internal" href="#id2" id="id5">简介</a></li>
+<li><a class="reference internal" href="#id3" id="id6">数据库操作</a></li>
+<li><a class="reference internal" href="#id4" id="id7">数据表操作</a></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h1><a class="toc-backref" href="#id5">1. 简介</a><a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h1>
+<p>数据库操作语法笔记</p>
+</div>
+<div class="section" id="id3">
+<h1><a class="toc-backref" href="#id6">2. 数据库操作</a><a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h1>
+<p>创建数据库</p>
+<div class="code mysql highlight-default"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">DATABASE</span> <span class="n">dbname</span>
+</pre></div>
+</div>
+<p>查看数据库</p>
+<div class="code mysql highlight-default"><div class="highlight"><pre><span></span><span class="n">show</span> <span class="n">databases</span>
+</pre></div>
+</div>
+<p>选择数据库</p>
+<div class="code mysql highlight-default"><div class="highlight"><pre><span></span><span class="n">USE</span> <span class="n">dbname</span>
+</pre></div>
+</div>
+<p>查看数据库中的表</p>
+<div class="code mysql highlight-default"><div class="highlight"><pre><span></span><span class="n">show</span> <span class="n">tables</span>
+</pre></div>
+</div>
+<p>删除数据库</p>
+<div class="code mysql highlight-default"><div class="highlight"><pre><span></span><span class="n">drop</span> <span class="n">database</span> <span class="n">dbname</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h1><a class="toc-backref" href="#id7">3. 数据表操作</a><a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h1>
+<p>常用的数据类型，大致可以分为四类：数值型、浮点型、日期/时间和字符串（字符）类型</p>
+<ol class="arabic simple">
+<li>数值类型</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="10%" />
+<col width="41%" />
+<col width="31%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">类型</th>
+<th class="head">字节</th>
+<th class="head">范围（signed）</th>
+<th class="head">范围（unsigned）</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>tinyint(n)</td>
+<td>1字节</td>
+<td>-128 ~ 127（-2^7 ~ 2^7-1）</td>
+<td>0 ~ 255（0~ 2^8-1）</td>
+</tr>
+<tr class="row-odd"><td>smallint(n)</td>
+<td>2字节</td>
+<td>-32768 ~ 32767（-2^15 ~ 2^15-1）</td>
+<td>0 ~ 65535（0 ~ 2^16-1）</td>
+</tr>
+<tr class="row-even"><td>mediumint(n)</td>
+<td>3字节</td>
+<td>-2^23 ~ 2^23-1</td>
+<td>0 ~ 2^24-1</td>
+</tr>
+<tr class="row-odd"><td>int(n)</td>
+<td>4字节</td>
+<td>-2^31 ~ 2^31-1</td>
+<td>0 ~ 2^32-1</td>
+</tr>
+<tr class="row-even"><td>bigint(n)</td>
+<td>8字节</td>
+<td>-2^63 ~ 2^63-1</td>
+<td>0 ~ 2^64-1</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li>显示宽度，如果某个数不够定义字段时设置的位数，则前面以0补填，zerofill
+属性修改 例：int(5) 插入一个数‘123’，补填后为‘00123’</li>
+</ul>
+<ol class="arabic simple" start="2">
+<li>浮点数&amp;定点数</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="26%" />
+<col width="15%" />
+<col width="59%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">类型</th>
+<th class="head">字节</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>float(M,D)</td>
+<td>4字节</td>
+<td>单精度浮点数（M总个数，D小数位）</td>
+</tr>
+<tr class="row-odd"><td>doubel(M,D)</td>
+<td>8字节</td>
+<td>双精度浮点数（M总个数，D小数位）</td>
+</tr>
+<tr class="row-even"><td>decimal(M,D)</td>
+<td>M+2</td>
+<td>定点数（M总个数，D小数位）</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li>显示宽度，不同于整型，前后均会补0</li>
+<li>浮点数表示近似值</li>
+<li>对货币等对精度敏感的数据，应该用定点数表示或存储</li>
+<li>编程中，如果用到浮点数，要特别注意误差问题，并尽量避免做浮点数比较</li>
+<li>定点数保存一个精确的数值，不会发生数据的改变，不同于浮点数的四舍五入</li>
+<li>将浮点数转换为字符串来保存，每9位数字保存为4个字节</li>
+<li>decimal(m,d) 参数m&lt;65 是总个数，d&lt;30且 d&lt;m 是小数位</li>
+</ul>
+<ol class="arabic simple" start="3">
+<li>字符串类型&amp;二进制类型</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="42%" />
+<col width="34%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">类型</th>
+<th class="head">大小</th>
+<th class="head">用途char</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>char</td>
+<td>0~255字节</td>
+<td>定长字符串</td>
+</tr>
+<tr class="row-odd"><td>varchar</td>
+<td>0~65535字节</td>
+<td>变长字符串</td>
+</tr>
+<tr class="row-even"><td>tinytext</td>
+<td>0~255（2^8-1）字节</td>
+<td>短文本字符串</td>
+</tr>
+<tr class="row-odd"><td>text</td>
+<td>0~65535（2^16-1）字节</td>
+<td>长文本字符串</td>
+</tr>
+<tr class="row-even"><td>mediumtext</td>
+<td>2^24-1字节</td>
+<td>中等长度文本数据</td>
+</tr>
+<tr class="row-odd"><td>longtext</td>
+<td>2^32-1字节</td>
+<td>极大文本数据</td>
+</tr>
+<tr class="row-even"><td>tinyblog</td>
+<td>2^8-1字节</td>
+<td>可存储二进制</td>
+</tr>
+<tr class="row-odd"><td>bolg</td>
+<td>2^16-1字节</td>
+<td>可存储二进制</td>
+</tr>
+<tr class="row-even"><td>mediumblog</td>
+<td>2^24-1字节</td>
+<td>可存储二进制</td>
+</tr>
+</tbody>
+</table>
+<p><strong>char 和 varchar</strong>：</p>
+<ul class="simple">
+<li>char(n)
+若存入字符数小于n，则以空格补于其后，查询之时再将空格去掉。所以 char
+类型存储的字符串末尾不能有空格，varchar 不限于此。</li>
+<li>char(n) 固定长度，char(4) 不管是存入几个字符，都将占用 4
+个字节，varchar 是存入的实际字符数 +1
+个字节（n&lt;=255）或2个字节(n&gt;255)，所以 varchar(4),存入 3 个字符将占用
+4 个字节。</li>
+<li>char 类型的字符串检索速度要比 varchar 类型的快</li>
+</ul>
+<p><strong>varchar 和 text</strong>：</p>
+<ul class="simple">
+<li>varchar 可指定 n，text 不能指定，内部存储 varchar 是存入的实际字符数
++1 个字节（n&lt;=255）或 2 个字节(n&gt;255)，text 是实际字符数 +2 个字节</li>
+<li>text 类型不能有默认值</li>
+<li>varchar 可直接创建索引，text 创建索引要指定前多少个字符。varchar
+查询速度快于 text, 在都创建索引的情况下，text 的索引似乎不起作用</li>
+<li>_BLOB和_text存储方式不同，_TEXT以文本方式存储，英文存储区分大小写，而_Blob是以二进制方式存储，不分大小写</li>
+<li>_BLOB存储的数据只能整体读出</li>
+<li>_TEXT可以指定字符集，_BLO不用指定字符集</li>
+</ul>
+<ol class="arabic simple" start="4">
+<li>时间日期类型</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="13%" />
+<col width="68%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">类型</th>
+<th class="head">字节</th>
+<th class="head">格式</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>datetime</td>
+<td>8字节</td>
+<td>1000-01-01 00:00:00 到 9999-12-31 23:59:59</td>
+</tr>
+<tr class="row-odd"><td>date</td>
+<td>3字节</td>
+<td>1000-01-01 到 9999-12-31</td>
+</tr>
+<tr class="row-even"><td>timestamp</td>
+<td>4字节</td>
+<td>19700101000000 到 2038-01-19 03:14:07</td>
+</tr>
+<tr class="row-odd"><td>time</td>
+<td>3字节</td>
+<td>-838:59:59 到 838:59:59</td>
+</tr>
+<tr class="row-even"><td>year</td>
+<td>1字节</td>
+<td>1901 - 2155</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../python/index.html" class="btn btn-neutral float-right" title="Python" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Mysql" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Wvv.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.2.2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

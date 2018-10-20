@@ -1,9 +1,8 @@
-Beautiful Soup
-==========
+Jupyter
+=============
 
 .. toctree::
     :maxdepth: 1
     :numbered: 2
 
-    beautifulsoup
-
+    jupyter安装

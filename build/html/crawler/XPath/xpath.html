@@ -1,0 +1,551 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.1. 简介 &mdash; Note 0.2.2 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../search.html"/>
+    <link rel="top" title="Note 0.2.2 文档" href="../../index.html"/>
+        <link rel="up" title="2. XPath" href="index.html"/>
+        <link rel="next" title="机器学习" href="../../machine_learning/index.html"/>
+        <link rel="prev" title="2. XPath" href="index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Note
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../data_analysis/index.html">数据分析</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">爬虫</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Beautifulsoup/index.html">1. Beautiful Soup</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">2. XPath</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.1. 简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#xpath">2.2. XPath 节点</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">节点关系</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">2.3. XPath语法</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id5">选取节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">谓语</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">选取未知节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">选取若干路径</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../machine_learning/index.html">机器学习</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../big_data/index.html">大数据</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tool/index.html">工具</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Note</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">爬虫</a> &raquo;</li>
+        
+          <li><a href="index.html">2. XPath</a> &raquo;</li>
+        
+      <li>2.1. 简介</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/crawler/XPath/xpath.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="contents topic" id="id1">
+<p class="topic-title first">目录</p>
+<ul class="simple">
+<li><a class="reference internal" href="#id2" id="id9">简介</a></li>
+<li><a class="reference internal" href="#xpath" id="id10">XPath 节点</a><ul>
+<li><a class="reference internal" href="#id3" id="id11">节点关系</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id4" id="id12">XPath语法</a><ul>
+<li><a class="reference internal" href="#id5" id="id13">选取节点</a></li>
+<li><a class="reference internal" href="#id6" id="id14">谓语</a></li>
+<li><a class="reference internal" href="#id7" id="id15">选取未知节点</a></li>
+<li><a class="reference internal" href="#id8" id="id16">选取若干路径</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h1><a class="toc-backref" href="#id9">2.1. 简介</a><a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h1>
+<p>XPath是一门在XML文档中查找信息的语言</p>
+</div>
+<div class="section" id="xpath">
+<h1><a class="toc-backref" href="#id10">2.2. XPath 节点</a><a class="headerlink" href="#xpath" title="永久链接至标题">¶</a></h1>
+<p>在 XPath
+中，有七种类型的节点：元素、属性、文本、命名空间、处理指令、注释以及文档（根）节点。XML
+文档是被作为节点树来对待的。树的根被称为文档节点或者根节点。</p>
+<div class="section" id="id3">
+<h2><a class="toc-backref" href="#id11">节点关系</a><a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>每个元素以及属性都有一个父。</p>
+<p>在下面的例子中，book 元素是 title、author、year 以及 price 元素的父：</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">book</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="n">Harry</span> <span class="n">Potter</span><span class="o">&lt;/</span><span class="n">title</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">author</span><span class="o">&gt;</span><span class="n">J</span> <span class="n">K</span><span class="o">.</span> <span class="n">Rowling</span><span class="o">&lt;/</span><span class="n">author</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">year</span><span class="o">&gt;</span><span class="mi">2005</span><span class="o">&lt;/</span><span class="n">year</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">price</span><span class="o">&gt;</span><span class="mf">29.99</span><span class="o">&lt;/</span><span class="n">price</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">book</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>元素节点可有零个、一个或多个子。</p>
+<p>在下面的例子中，title、author、year 以及 price 元素都是 book 元素的子：</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">book</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="n">Harry</span> <span class="n">Potter</span><span class="o">&lt;/</span><span class="n">title</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">author</span><span class="o">&gt;</span><span class="n">J</span> <span class="n">K</span><span class="o">.</span> <span class="n">Rowling</span><span class="o">&lt;/</span><span class="n">author</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">year</span><span class="o">&gt;</span><span class="mi">2005</span><span class="o">&lt;/</span><span class="n">year</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">price</span><span class="o">&gt;</span><span class="mf">29.99</span><span class="o">&lt;/</span><span class="n">price</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">book</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>拥有相同的父的节点</p>
+<p>在下面的例子中，title、author、year 以及 price 元素都是同胞：</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">book</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="n">Harry</span> <span class="n">Potter</span><span class="o">&lt;/</span><span class="n">title</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">author</span><span class="o">&gt;</span><span class="n">J</span> <span class="n">K</span><span class="o">.</span> <span class="n">Rowling</span><span class="o">&lt;/</span><span class="n">author</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">year</span><span class="o">&gt;</span><span class="mi">2005</span><span class="o">&lt;/</span><span class="n">year</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">price</span><span class="o">&gt;</span><span class="mf">29.99</span><span class="o">&lt;/</span><span class="n">price</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">book</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>某节点的父、父的父，等等。</p>
+<p>在下面的例子中，title 元素的先辈是 book 元素和 bookstore 元素：</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">bookstore</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">book</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="n">Harry</span> <span class="n">Potter</span><span class="o">&lt;/</span><span class="n">title</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">author</span><span class="o">&gt;</span><span class="n">J</span> <span class="n">K</span><span class="o">.</span> <span class="n">Rowling</span><span class="o">&lt;/</span><span class="n">author</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">year</span><span class="o">&gt;</span><span class="mi">2005</span><span class="o">&lt;/</span><span class="n">year</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">price</span><span class="o">&gt;</span><span class="mf">29.99</span><span class="o">&lt;/</span><span class="n">price</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">book</span><span class="o">&gt;</span>
+
+<span class="o">&lt;/</span><span class="n">bookstore</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>某个节点的子，子的子，等等。</p>
+<p>在下面的例子中，bookstore 的后代是 book、title、author、year 以及 price
+元素：</p>
+<div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">bookstore</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">book</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="n">Harry</span> <span class="n">Potter</span><span class="o">&lt;/</span><span class="n">title</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">author</span><span class="o">&gt;</span><span class="n">J</span> <span class="n">K</span><span class="o">.</span> <span class="n">Rowling</span><span class="o">&lt;/</span><span class="n">author</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">year</span><span class="o">&gt;</span><span class="mi">2005</span><span class="o">&lt;/</span><span class="n">year</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">price</span><span class="o">&gt;</span><span class="mf">29.99</span><span class="o">&lt;/</span><span class="n">price</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">book</span><span class="o">&gt;</span>
+
+<span class="o">&lt;/</span><span class="n">bookstore</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h1><a class="toc-backref" href="#id12">2.3. XPath语法</a><a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id5">
+<h2><a class="toc-backref" href="#id13">选取节点</a><a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>XPath 使用路径表达式在 XML 文档中选取节点。节点是通过沿着路径或者 step
+来选取的。 下面列出了最有用的路径表达式</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="83%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">表达式</th>
+<th class="head">描述</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>nodename</td>
+<td>选取此节点的所有子节点</td>
+</tr>
+<tr class="row-odd"><td>/</td>
+<td>从根节点选取</td>
+</tr>
+<tr class="row-even"><td>//</td>
+<td>从匹配选择的当前节点选择文档中的节点，而不考虑它们的位置</td>
+</tr>
+<tr class="row-odd"><td>.</td>
+<td>选取当前节点</td>
+</tr>
+<tr class="row-even"><td></td>
+<td>选取当前节点的父节点</td>
+</tr>
+<tr class="row-odd"><td>&#64;</td>
+<td>选取属性</td>
+</tr>
+</tbody>
+</table>
+<p>例如：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="83%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">路径表达式</th>
+<th class="head">结果</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>bookstore</td>
+<td>选取 bookstore 元素的所有子节点</td>
+</tr>
+<tr class="row-odd"><td>/bookstore</td>
+<td>选取根元素 bookstore 注释：假如路径起始于正斜杠( / )，则此路径始终代表到某元素的绝对路径！</td>
+</tr>
+<tr class="row-even"><td>bookstore/book</td>
+<td>选取属于 bookstore 的子元素的所有 book 元素</td>
+</tr>
+<tr class="row-odd"><td>//book</td>
+<td>选取所有 book 子元素，而不管它们在文档中的位置</td>
+</tr>
+<tr class="row-even"><td>bookstore//book</td>
+<td>选择属于 bookstore 元素的后代的所有 book 元素，而不管它们位于 bookstore 之下的什么位置</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="mailto://&#37;&#52;&#48;lang">//<span>&#64;</span>lang</a></td>
+<td>选取名为 lang 的所有属性。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id6">
+<h2><a class="toc-backref" href="#id14">谓语</a><a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>谓语用来查找某个特定的节点或者包含某个指定的值的节点。</p>
+<p>谓语被嵌在方括号中。</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="37%" />
+<col width="63%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">路径表达式</th>
+<th class="head">结果</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>/bookstore/book[1]</td>
+<td>选取属于 bookstore 子元素的第一个 book 元素。</td>
+</tr>
+<tr class="row-odd"><td>/bookstore/book[last()]</td>
+<td>选取属于 bookstore 子元素的最后一个 book
+元素。</td>
+</tr>
+<tr class="row-even"><td>/bookstore/book[last()-1]</td>
+<td>选取属于 bookstore 子元素的倒数第二个 book
+元素。</td>
+</tr>
+<tr class="row-odd"><td>/bookstore/book[position()
+&lt;3]</td>
+<td>选取最前面的两个属于 bookstore 元素的子元素的
+book 元素。</td>
+</tr>
+<tr class="row-even"><td>//title[&#64;lang]</td>
+<td>选取所有拥有名为 lang 的属性的 title 元素。</td>
+</tr>
+<tr class="row-odd"><td>//title[&#64;lang=’eng’]</td>
+<td>选取所有 title 元素，且这些元素拥有值为 eng
+的 lang 属性。</td>
+</tr>
+<tr class="row-even"><td>/bookstore/book[price&gt;35.0
+0]</td>
+<td>选取 bookstore 元素的所有 book 元素，且其中的
+price 元素的值须大于 35.00。</td>
+</tr>
+<tr class="row-odd"><td>/bookstore/book[price&gt;35.0
+0]/title</td>
+<td>选取 bookstore 元素中的 book 元素的所有 title
+元素，且其中的 price 元素的值须大于 35.00。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id7">
+<h2><a class="toc-backref" href="#id15">选取未知节点</a><a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+<p>XPath 通配符可用来选取未知的 XML 元素</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="71%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">通配符</th>
+<th class="head">描述</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>*</td>
+<td>匹配任何元素节点。</td>
+</tr>
+<tr class="row-odd"><td>&#64;*</td>
+<td>匹配任何属性节点。</td>
+</tr>
+<tr class="row-even"><td>node()</td>
+<td>匹配任何类型的节点。</td>
+</tr>
+</tbody>
+</table>
+<p>在下面的表格中，我们列出了一些路径表达式，以及这些表达式的结果：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="69%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">路径表达式</th>
+<th class="head">结果</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>/bookstore/*</td>
+<td>选取 bookstore 元素的所有子元素。</td>
+</tr>
+<tr class="row-odd"><td>//*</td>
+<td>选取文档中的所有元素。</td>
+</tr>
+<tr class="row-even"><td>//title[&#64;*]</td>
+<td>选取所有带有属性的 title 元素。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id8">
+<h2><a class="toc-backref" href="#id16">选取若干路径</a><a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
+<p>通过在路径表达式中使用”|”运算符，您可以选取若干个路径。</p>
+<p>在下面的表格中，我们列出了一些路径表达式，以及这些表达式的结果：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="36%" />
+<col width="64%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">路径表达式</th>
+<th class="head">结果</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>//book/title |
+//book/price</td>
+<td>选取 book 元素的所有 title 和 price 元素。</td>
+</tr>
+<tr class="row-odd"><td>//title | //price</td>
+<td>选取文档中的所有 title 和 price 元素。</td>
+</tr>
+<tr class="row-even"><td>/bookstore/book/title |
+//price</td>
+<td>选取属于 bookstore 元素的 book 元素的所有
+title 元素，以及文档中所有的 price 元素。</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../machine_learning/index.html" class="btn btn-neutral float-right" title="机器学习" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="2. XPath" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Wvv.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.2.2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
