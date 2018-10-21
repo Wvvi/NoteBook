@@ -81,7 +81,7 @@ XPath是一门在XML文档中查找信息的语言
 </bookstore>
 ```
 
-# XPath语法
+# XPath 语法
 
 ## 选取节点
 

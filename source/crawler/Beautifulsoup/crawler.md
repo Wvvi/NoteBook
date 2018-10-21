@@ -2,6 +2,8 @@
 
 本文主要介绍Beautifulsoup的用法，通过解析以下html示例代码来完成介绍：
 
+主要参考beautiful soup 官方文档：https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#id27
+
 ```html
 html_doc = """
 <html><head><title>The Dormouse's story</title></head>
