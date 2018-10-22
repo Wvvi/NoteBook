@@ -1,9 +1,9 @@
-工具
+Git
 ==========
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :numbered: 2
     
-    Git/index
+    git
 

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2. XPath &mdash; Note 0.2.2 文档</title>
+  <title>Git &mdash; Note 0.2.2 文档</title>
   
 
   
@@ -36,9 +36,9 @@
               href="../../genindex.html"/>
         <link rel="search" title="搜索" href="../../search.html"/>
     <link rel="top" title="Note 0.2.2 文档" href="../../index.html"/>
-        <link rel="up" title="爬虫" href="../index.html"/>
-        <link rel="next" title="1. 简介" href="xpath.html"/>
-        <link rel="prev" title="1. 简介" href="../Beautifulsoup/beautifulsoup.html"/> 
+        <link rel="up" title="工具" href="../index.html"/>
+        <link rel="next" title="1. 简介" href="git.html"/>
+        <link rel="prev" title="工具" href="../index.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -94,19 +94,22 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../data_analysis/index.html">数据分析</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">爬虫</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../Beautifulsoup/index.html">1. Beautiful Soup</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">2. XPath</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="xpath.html">1. 简介</a></li>
-<li class="toctree-l3"><a class="reference internal" href="xpath.html#xpath">2. XPath 节点</a></li>
-<li class="toctree-l3"><a class="reference internal" href="xpath.html#id4">3. XPath语法</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../crawler/index.html">爬虫</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../machine_learning/index.html">机器学习</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../big_data/index.html">大数据</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tool/index.html">工具</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">工具</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Git</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git.html">1. 简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git.html#id3">2. 工作原理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git.html#id4">3. 创建版本库</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git.html#id5">4. 版本回退</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git.html#id6">5. 撤销修改和删除文件操作</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git.html#id7">6. 创建与合并分支</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git.html#id8">7. 多人协作</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
             
@@ -151,15 +154,15 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="../index.html">爬虫</a> &raquo;</li>
+          <li><a href="../index.html">工具</a> &raquo;</li>
         
-      <li>2. XPath</li>
+      <li>Git</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/crawler/XPath/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/tool/Git/index.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -172,13 +175,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="xpath">
-<h1>XPath<a class="headerlink" href="#xpath" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="git">
+<h1>Git<a class="headerlink" href="#git" title="永久链接至标题">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="xpath.html">1. 简介</a></li>
-<li class="toctree-l1"><a class="reference internal" href="xpath.html#xpath">2. XPath 节点</a></li>
-<li class="toctree-l1"><a class="reference internal" href="xpath.html#id4">3. XPath语法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">1. 简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git.html#id3">2. 工作原理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git.html#id4">3. 创建版本库</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git.html#id5">4. 版本回退</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git.html#id6">5. 撤销修改和删除文件操作</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git.html#id7">6. 创建与合并分支</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git.html#id8">7. 多人协作</a></li>
 </ul>
 </div>
 </div>
@@ -193,10 +200,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="xpath.html" class="btn btn-neutral float-right" title="1. 简介" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="git.html" class="btn btn-neutral float-right" title="1. 简介" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../Beautifulsoup/beautifulsoup.html" class="btn btn-neutral" title="1. 简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../index.html" class="btn btn-neutral" title="工具" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
