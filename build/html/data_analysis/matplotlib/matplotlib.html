@@ -1,0 +1,417 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Note 0.2.2 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../search.html"/>
+    <link rel="top" title="Note 0.2.2 文档" href="../../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Note
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">数据分析</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../crawler/index.html">爬虫</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../machine_learning/index.html">机器学习</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../big_data/index.html">大数据</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tool/index.html">工具</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Note</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>简介</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/data_analysis/matplotlib/matplotlib.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="contents topic" id="id1">
+<p class="topic-title first">目录</p>
+<ul class="simple">
+<li><a class="reference internal" href="#id2" id="id18">简介</a></li>
+<li><a class="reference internal" href="#figure" id="id19">Figure画布背景设置</a><ul>
+<li><a class="reference internal" href="#id3" id="id20">单一色彩背景</a></li>
+<li><a class="reference internal" href="#id4" id="id21">复合色彩背景</a></li>
+<li><a class="reference internal" href="#id5" id="id22">图像背景</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#axes" id="id23">Axes绘图区</a><ul>
+<li><a class="reference internal" href="#id6" id="id24">绘图布局的创建</a></li>
+<li><a class="reference internal" href="#id7" id="id25">绘图区网格设置</a></li>
+<li><a class="reference internal" href="#id8" id="id26">图例设置</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id9" id="id27">坐标轴设置</a><ul>
+<li><a class="reference internal" href="#id10" id="id28">改变坐标轴所依附的边框线</a></li>
+<li><a class="reference internal" href="#id11" id="id29">坐标轴设置方向</a></li>
+<li><a class="reference internal" href="#id12" id="id30">坐标轴范围设置</a></li>
+<li><a class="reference internal" href="#id13" id="id31">坐标轴刻度线与刻度线标签</a></li>
+<li><a class="reference internal" href="#id14" id="id32">坐标刻度比例尺</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id15" id="id33">文字显示</a></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h1><a class="toc-backref" href="#id18">简介</a><a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h1>
+<p>matplotlib的图像组成</p>
+<div class="figure" id="id16">
+<img alt="matplotlib图像组成" src="../../_images/matplotlib图像组成.png" />
+<p class="caption"><span class="caption-text">matplotlib图像组成</span></p>
+</div>
+</div>
+<div class="section" id="figure">
+<h1><a class="toc-backref" href="#id19">Figure画布背景设置</a><a class="headerlink" href="#figure" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id3">
+<h2><a class="toc-backref" href="#id20">单一色彩背景</a><a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span>Figure设置单一色彩背景通常有两种方法:
+
+1、创建Figure对象时给定facecolor关键字参数值
+   fig = plt.figure(facecolor=&#39;snow&#39;)
+
+2、使用Figure对象的set_facecolor方法
+   fig = plt.figure()fig.set_facecolor(&#39;blueviolet&#39;)
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2><a class="toc-backref" href="#id21">复合色彩背景</a><a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span>Figure设置复合色彩背景步骤:
+
+1、创建色彩数组
+   a = [np.linspace(0,1,1600)]*1600
+2、通过Figure对象的figimage方法中的cmap关键字设定要设定的背景色彩
+   fig.figimage(a, cmap= plt.get_cmap(&#39;autumn&#39;))
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2><a class="toc-backref" href="#id22">图像背景</a><a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span>Figure设置图像背景步骤:
+
+1、将图像文件转换成数组
+   bgimg = img.imread(&#39;./world.png&#39;)
+2、通过Figure对象的figimage方法将图像设置为背景
+   fig.figimage(bgimg)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="axes">
+<h1><a class="toc-backref" href="#id23">Axes绘图区</a><a class="headerlink" href="#axes" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id6">
+<h2><a class="toc-backref" href="#id24">绘图布局的创建</a><a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span>绘图布局的创建主要有三种方法：
+
+1、axes=figure.add_axes([left,bottom,width,height])
+2、fig、axes=pyplot.subplots(nrows,ncols)
+3、axes=figure.add_subplot(行号，列数，序号)
+</pre></div>
+</div>
+<ul class="simple">
+<li>无论使用何种方法创建，每一个axes都是一个独立的图层</li>
+<li>每个图层除了绘图区以外都是透明的</li>
+<li>图层之间相互独立互补影响</li>
+<li>当两个axes绘图区之间有重叠的时候，创建命令在前的axes图层位更靠近底层</li>
+<li>axes.set_zorder()方法改变当前图层层次高度，参数值越小位置越靠近底层</li>
+</ul>
+<div class="figure" id="id17">
+<img alt="axes" src="../../_images/axes.gif" />
+<p class="caption"><span class="caption-text">axes</span></p>
+</div>
+<ul class="simple">
+<li>fig,axes=pyplot.subplots()该方法之间创建出n行，m列的绘图区</li>
+<li>axes=figure.add_subplot()该方法一行命令只能创建一个axes绘图区，即序号参数所指定的那个位置的axes</li>
+</ul>
+</div>
+<div class="section" id="id7">
+<h2><a class="toc-backref" href="#id25">绘图区网格设置</a><a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+<p>axes.grid(b=None,which=’major’,axis=’both’,**kwargs)</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>which参数的值为major,minor,both,默认为major:
+1、major只绘制大刻度网格
+2、minor只绘制小刻度网络
+3、both 绘制全刻度网格
+
+axis为绘制轴
+参数为&#39;x&#39;,&#39;y&#39;,&#39;both&#39;
+
+ax.grid(color=&#39;skyblue&#39;)用于设置网格的颜色
+ax.grid(linestyle=&#39;--&#39;)用于设置网格的样式
+ax.grid(linewidth=2)用于设置网格的粗细
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2><a class="toc-backref" href="#id26">图例设置</a><a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">legend方法可以显示图例</span>
+
+<span class="n">通过handles</span><span class="p">,</span><span class="n">labels</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">get_legend_handles_labels</span><span class="p">()</span><span class="n">方法可以得到图例的图像列表和文字列表</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">labels</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="n">可以将图例顺序颠倒过来</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id9">
+<h1><a class="toc-backref" href="#id27">坐标轴设置</a><a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id10">
+<h2><a class="toc-backref" href="#id28">改变坐标轴所依附的边框线</a><a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li>axes.xaxis.set_ticks_position()</li>
+<li>axes.yaxis.set_ticks_position()</li>
+</ul>
+<p>两个方法都有四个参数可以设置’bottom’,’top’,’both’,’none’</p>
+</div>
+<div class="section" id="id11">
+<h2><a class="toc-backref" href="#id29">坐标轴设置方向</a><a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">axes</span><span class="o">.</span><span class="n">invert_xaxis</span><span class="p">()</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>
+<span class="n">这个两个方法不需要参数</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id12">
+<h2><a class="toc-backref" href="#id30">坐标轴范围设置</a><a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span>axes.set_xlim(left,right)
+axes.set_ylim(bottom,top)
+
+axes.set_xbound(lower,upper)
+axes.set_ybound(lower,upper)
+该方法参数部分先后，大的值代表坐标轴的最大值，小的为最小值
+</pre></div>
+</div>
+</div>
+<div class="section" id="id13">
+<h2><a class="toc-backref" href="#id31">坐标轴刻度线与刻度线标签</a><a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span>axes.set_xticks(ticks,minor=False)
+ticks值是一个列表，代表刻度线的显示位置；参数minor用于设置主刻度线与副刻度线，默认False，代表主刻度线
+
+axes.set_xticklabels(labels,minor=False)
+用于显示x轴上刻度线的标签
+</pre></div>
+</div>
+</div>
+<div class="section" id="id14">
+<h2><a class="toc-backref" href="#id32">坐标刻度比例尺</a><a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span>axes.set_xscale()
+axes.set_yscale()
+
+其方法的参数值有四种形式：linear,log,logit,symlog
+liner代表默认情况下的线性比例尺，即刻度数值为等差数列
+
+log,logit,symlog代表对数比例尺，即刻度数值为等比数列
+log比例尺用于正数区间的数据
+logit比例尺用于（0，1）区间内的数据
+symlog比例尺用于整个实数区间的数据
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id15">
+<h1><a class="toc-backref" href="#id33">文字显示</a><a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h1>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">text</span><span class="p">()</span>               <span class="n">在图上任意位置显示我们想要显示的文字</span>
+<span class="n">xlabel</span><span class="p">()</span>             <span class="n">用于设置x轴的标签文字</span>
+<span class="n">ylabel</span><span class="p">()</span>             <span class="n">用于设置y轴的标签文字</span>
+<span class="n">title</span><span class="p">()</span>              <span class="n">用于设置图像标题的文字</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Wvv.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.2.2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
