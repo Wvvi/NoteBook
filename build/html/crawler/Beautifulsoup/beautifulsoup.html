@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1.1. 简介 &mdash; Note 0.2.2 文档</title>
+  <title>1. 简介 &mdash; Note 0.2.2 文档</title>
   
 
   
@@ -37,7 +37,7 @@
         <link rel="search" title="搜索" href="../../search.html"/>
     <link rel="top" title="Note 0.2.2 文档" href="../../index.html"/>
         <link rel="up" title="1. Beautiful Soup" href="index.html"/>
-        <link rel="next" title="2. XPath" href="../XPath/index.html"/>
+        <link rel="next" title="1. XPath" href="../XPath/index.html"/>
         <link rel="prev" title="1. Beautiful Soup" href="index.html"/> 
 
   
@@ -96,29 +96,29 @@
 <li class="toctree-l1"><a class="reference internal" href="../../data_analysis/index.html">数据分析</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">爬虫</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">1. Beautiful Soup</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">1.1. 简介</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id3">1.2. 对象的种类</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#tag">Tag</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id5">可以遍历的字符串</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#beautifulsoup">BeautifulSoup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id6">注释及特殊字符串</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1. 简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">2. 对象的种类</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tag">2.1. Tag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">2.2. 可以遍历的字符串</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#beautifulsoup">2.3. BeautifulSoup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">2.4. 注释及特殊字符串</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#id7">1.3. 遍历文档树</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id8">子节点</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id10">父节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">3. 遍历文档树</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id8">3.1. 子节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">3.2. 父节点</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#id12">1.4. 搜索文档树</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id13">过滤器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#find-all">find_all()</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#find">find()</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id18">CSS选择器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">4. 搜索文档树</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id13">4.1. 过滤器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#find-all">4.2. find_all()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#find">4.3. find()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id18">4.4. CSS选择器</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../XPath/index.html">2. XPath</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../XPath/index.html">1. XPath</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../machine_learning/index.html">机器学习</a></li>
@@ -172,7 +172,7 @@
         
           <li><a href="index.html">1. Beautiful Soup</a> &raquo;</li>
         
-      <li>1.1. 简介</li>
+      <li>1. 简介</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -247,7 +247,7 @@
 </ul>
 </div>
 <div class="section" id="id2">
-<h1><a class="toc-backref" href="#id19">1.1. 简介</a><a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h1>
+<h1><a class="toc-backref" href="#id19">1. 简介</a><a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h1>
 <p>本文主要介绍Beautifulsoup的用法，通过解析以下html示例代码来完成介绍：</p>
 <div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">html_doc</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">&lt;html&gt;&lt;head&gt;&lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;&lt;/head&gt;</span>
@@ -266,12 +266,12 @@
 </div>
 </div>
 <div class="section" id="id3">
-<h1><a class="toc-backref" href="#id20">1.2. 对象的种类</a><a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h1>
+<h1><a class="toc-backref" href="#id20">2. 对象的种类</a><a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h1>
 <p>Beautiful
 Soup将复杂HTML文档转换成一个复杂的树形结构,每个节点都是Python对象,所有对象可以归纳为4种:
 <code class="docutils literal"><span class="pre">Tag</span></code> , <code class="docutils literal"><span class="pre">NavigableString</span></code> , <code class="docutils literal"><span class="pre">BeautifulSoup</span></code> , <code class="docutils literal"><span class="pre">Comment</span></code></p>
 <div class="section" id="tag">
-<h2><a class="toc-backref" href="#id21">Tag</a><a class="headerlink" href="#tag" title="永久链接至标题">¶</a></h2>
+<h2><a class="toc-backref" href="#id21">2.1. Tag</a><a class="headerlink" href="#tag" title="永久链接至标题">¶</a></h2>
 <p>Tag有很多方法和属性,在
 <a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#id15">遍历文档树</a>
 和
@@ -318,7 +318,7 @@ Soup中多值属性的返回类型是list</p>
 </div>
 </div>
 <div class="section" id="id5">
-<h2><a class="toc-backref" href="#id25">可以遍历的字符串</a><a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<h2><a class="toc-backref" href="#id25">2.2. 可以遍历的字符串</a><a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <p>字符串常被包含在tag内.Beautiful Soup用 <code class="docutils literal"><span class="pre">NavigableString</span></code>
 类来包装tag中的字符串:</p>
 <div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">tag</span><span class="o">.</span><span class="n">string</span>
@@ -329,7 +329,7 @@ Soup中多值属性的返回类型是list</p>
 </div>
 </div>
 <div class="section" id="beautifulsoup">
-<h2><a class="toc-backref" href="#id26">BeautifulSoup</a><a class="headerlink" href="#beautifulsoup" title="永久链接至标题">¶</a></h2>
+<h2><a class="toc-backref" href="#id26">2.3. BeautifulSoup</a><a class="headerlink" href="#beautifulsoup" title="永久链接至标题">¶</a></h2>
 <p><code class="docutils literal"><span class="pre">BeautifulSoup</span></code> 对象表示的是一个文档的全部内容.大部分时候,可以把它当作
 <code class="docutils literal"><span class="pre">Tag</span></code> 对象,它支持
 <a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#id15">遍历文档树</a>
@@ -346,7 +346,7 @@ Soup中多值属性的返回类型是list</p>
 </div>
 </div>
 <div class="section" id="id6">
-<h2><a class="toc-backref" href="#id27">注释及特殊字符串</a><a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<h2><a class="toc-backref" href="#id27">2.4. 注释及特殊字符串</a><a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
 <p><code class="docutils literal"><span class="pre">Tag</span></code> , <code class="docutils literal"><span class="pre">NavigableString</span></code> , <code class="docutils literal"><span class="pre">BeautifulSoup</span></code>
 几乎覆盖了html和xml中的所有内容,但是还有一些特殊对象.容易让人担心的内容是文档的注释部分:</p>
 <div class="code html highlight-default"><div class="highlight"><pre><span></span><span class="n">markup</span> <span class="o">=</span> <span class="s2">&quot;&lt;b&gt;&lt;!--Hey, buddy. Want to buy a used parser?--&gt;&lt;/b&gt;&quot;</span>
@@ -359,9 +359,9 @@ Soup中多值属性的返回类型是list</p>
 </div>
 </div>
 <div class="section" id="id7">
-<h1><a class="toc-backref" href="#id28">1.3. 遍历文档树</a><a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h1>
+<h1><a class="toc-backref" href="#id28">3. 遍历文档树</a><a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h1>
 <div class="section" id="id8">
-<h2><a class="toc-backref" href="#id29">子节点</a><a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
+<h2><a class="toc-backref" href="#id29">3.1. 子节点</a><a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
 <p>一个Tag可能包含多个字符串或其它的Tag,这些都是这个Tag的子节点.Beautiful
 Soup提供了许多操作和遍历子节点的属性.</p>
 <p>注意: Beautiful Soup中字符串节点不支持这些属性,因为字符串没有子节点</p>
@@ -518,7 +518,7 @@ story”也属于’head’标签的子孙节点. <code class="docutils literal"
 </div>
 </div>
 <div class="section" id="id10">
-<h2><a class="toc-backref" href="#id35">父节点</a><a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+<h2><a class="toc-backref" href="#id35">3.2. 父节点</a><a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
 <p>继续分析文档树,每个tag或字符串都有父节点:被包含在某个tag中</p>
 <div class="section" id="parent">
 <h3><a class="toc-backref" href="#id36">.parent</a><a class="headerlink" href="#parent" title="永久链接至标题">¶</a></h3>
@@ -633,11 +633,11 @@ story”也属于’head’标签的子孙节点. <code class="docutils literal"
 </div>
 </div>
 <div class="section" id="id12">
-<h1><a class="toc-backref" href="#id40">1.4. 搜索文档树</a><a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h1>
+<h1><a class="toc-backref" href="#id40">4. 搜索文档树</a><a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h1>
 <p>Beautiful Soup定义了很多搜索方法,这里着重介绍2个: <code class="docutils literal"><span class="pre">find()</span></code> 和
 <code class="docutils literal"><span class="pre">find_all()</span></code></p>
 <div class="section" id="id13">
-<h2><a class="toc-backref" href="#id41">过滤器</a><a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h2>
+<h2><a class="toc-backref" href="#id41">4.1. 过滤器</a><a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h2>
 <p>介绍 <code class="docutils literal"><span class="pre">find_all()</span></code> 方法前,先介绍一下过滤器的类型
 ,这些过滤器贯穿整个搜索的API.过滤器可以被用在tag的name中,节点的属性中,字符串中或他们的混合中.</p>
 <div class="section" id="id14">
@@ -675,7 +675,7 @@ Soup会将与列表中任一元素匹配的内容返回.下面代码找到文档
 </div>
 </div>
 <div class="section" id="find-all">
-<h2><a class="toc-backref" href="#id45">find_all()</a><a class="headerlink" href="#find-all" title="永久链接至标题">¶</a></h2>
+<h2><a class="toc-backref" href="#id45">4.2. find_all()</a><a class="headerlink" href="#find-all" title="永久链接至标题">¶</a></h2>
 <p>find_all(
 <a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#id32">name</a>
 ,
@@ -809,7 +809,7 @@ Soup会检索当前tag的所有子孙节点,如果只想搜索tag的直接子节
 </div>
 </div>
 <div class="section" id="find">
-<h2><a class="toc-backref" href="#id51">find()</a><a class="headerlink" href="#find" title="永久链接至标题">¶</a></h2>
+<h2><a class="toc-backref" href="#id51">4.3. find()</a><a class="headerlink" href="#find" title="永久链接至标题">¶</a></h2>
 <p>find(
 <a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#id32">name</a>
 ,
@@ -853,7 +853,7 @@ Soup会检索当前tag的所有子孙节点,如果只想搜索tag的直接子节
 </div>
 </div>
 <div class="section" id="id18">
-<h2><a class="toc-backref" href="#id52">CSS选择器</a><a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h2>
+<h2><a class="toc-backref" href="#id52">4.4. CSS选择器</a><a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h2>
 <p>Beautiful Soup支持大部分的CSS选择器 ,在 <code class="docutils literal"><span class="pre">Tag</span></code> 或 <code class="docutils literal"><span class="pre">BeautifulSoup</span></code>
 对象的 <code class="docutils literal"><span class="pre">.select()</span></code>
 方法中传入字符串参数,即可使用CSS选择器的语法找到tag:</p>
@@ -958,7 +958,7 @@ Soup会检索当前tag的所有子孙节点,如果只想搜索tag的直接子节
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../XPath/index.html" class="btn btn-neutral float-right" title="2. XPath" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../XPath/index.html" class="btn btn-neutral float-right" title="1. XPath" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral" title="1. Beautiful Soup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
