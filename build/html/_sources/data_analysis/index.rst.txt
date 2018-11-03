@@ -12,6 +12,7 @@
     pandas/index
     matplotlib/index
     seaborn/index
+    statistics/index
 
 
 

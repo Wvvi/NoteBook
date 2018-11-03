@@ -145,7 +145,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/data_analysis/statistics/statistics.md.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/data_analysis/statistics/statistics.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -158,229 +158,343 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="">
-<span id="id1"></span><h1>简介<a class="headerlink" href="#" title="永久链接至标题">¶</a></h1>
+  <div class="contents topic" id="id1">
+<p class="topic-title first">目录</p>
+<ul class="simple">
+<li><a class="reference internal" href="#id2" id="id14">简介</a></li>
+<li><a class="reference internal" href="#id3" id="id15">描述统计</a><ul>
+<li><a class="reference internal" href="#id4" id="id16">概念</a></li>
+<li><a class="reference internal" href="#id5" id="id17">分散性与变异性的度量</a></li>
+<li><a class="reference internal" href="#id6" id="id18">期望</a></li>
+<li><a class="reference internal" href="#id7" id="id19">离散概率分布</a></li>
+<li><a class="reference internal" href="#id8" id="id20">连续概率分布</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id9" id="id21">推论统计</a><ul>
+<li><a class="reference internal" href="#id10" id="id22">统计抽样</a></li>
+<li><a class="reference internal" href="#id11" id="id23">总体和样本的估计</a></li>
+<li><a class="reference internal" href="#id12" id="id24">置信区间</a></li>
+<li><a class="reference internal" href="#id13" id="id25">假设检验</a></li>
+<li><a class="reference internal" href="#x-2" id="id26"><span class="math">x^2</span>(卡方)分布</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h1><a class="toc-backref" href="#id14">简介</a><a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h1>
 <p>描述统计与推论统计笔记</p>
 </div>
-<div class="section" id="">
-<span id="id2"></span><h1>描述统计<a class="headerlink" href="#" title="永久链接至标题">¶</a></h1>
-<div class="section" id="">
-<span id="id3"></span><h2>概念<a class="headerlink" href="#" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id3">
+<h1><a class="toc-backref" href="#id15">描述统计</a><a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id4">
+<h2><a class="toc-backref" href="#id16">概念</a><a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>通过图表或数学方法，对数据资料进行整理、分析，并对数据的分布状态、数字特征和随机变量之间关系进行估计和描述的方法。描述统计分为集中趋势分析和离中趋势分析和相关分析三大部分。</p>
-<ul>
-<li><p class="first"><strong>集中趋势</strong></p>
+<ul class="simple">
+<li><strong>集中趋势</strong></li>
+</ul>
 <p>集中趋势分析主要靠平均数、中数、众数等统计指标来表示数据的集中趋势。例如被试的平均成绩多少？是正偏分布还是负偏分布？</p>
-</li>
-<li><p class="first"><strong>离中趋势</strong></p>
+<ul class="simple">
+<li><strong>离中趋势</strong></li>
+</ul>
 <p>离中趋势分析主要靠全距、四分差、平均差、方差、标准差等统计指标来表示数据的离中趋势。例如，我们想知道两个教学班的语文成绩中，哪个班级内的成绩分布更分散，就可以用两个班级的四分差或百分点来比较</p>
-</li>
-<li><p class="first"><strong>相关分析</strong></p>
+<ul class="simple">
+<li><strong>相关分析</strong></li>
+</ul>
 <p>离散变量是指其数值只能用自然数或整数单位计算的则为离散变量.例如,企业个数,职工人数,设备台数等,只能按计量单位数计数,这种变量的数值一般用计数方法取得。</p>
 <p>反之,在一定区间内可以任意取值的变量叫连续变量,其数值是连续不断的,相邻两个数值可作无限分割,即可取无限个数值.例如,生产零件的规格尺寸,人体测量的身高,体重,胸围等为连续变量,其数值只能用测量或计量的方法取得</p>
-</li>
-</ul>
 </div>
-<div class="section" id="">
-<span id="id4"></span><h2>分散性与变异性的度量<a class="headerlink" href="#" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id5">
+<h2><a class="toc-backref" href="#id17">分散性与变异性的度量</a><a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <p>度量方法：全距（容易受异常值的影响），四分位距，百分位距</p>
-<p><img alt="" src="../../_images/分散性与变异性的度量.png" /></p>
+<div class="figure">
+<img alt="" src="../../_images/分散性与变异性的度量.png" />
 </div>
-<div class="section" id="">
-<span id="id5"></span><h2>期望<a class="headerlink" href="#" title="永久链接至标题">¶</a></h2>
-<ul>
-<li><p class="first"><strong>平均数</strong></p>
-<p><img alt="" src="../../_images/平均数.png" /></p>
-</li>
-<li><p class="first"><strong>期望</strong></p>
-</li>
+</div>
+<div class="section" id="id6">
+<h2><a class="toc-backref" href="#id18">期望</a><a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><strong>平均数</strong></li>
 </ul>
-<p><img alt="" src="../../_images/期望.png" /></p>
+<div class="figure">
+<img alt="" src="../../_images/平均数.png" />
+</div>
+<ul class="simple">
+<li><strong>期望</strong></li>
+</ul>
+<div class="figure">
+<img alt="" src="../../_images/期望.png" />
+</div>
 <ul class="simple">
 <li><strong>期望公式</strong></li>
 </ul>
-<p><img alt="" src="../../_images/期望公式.png" /></p>
+<div class="figure">
+<img alt="" src="../../_images/期望公式.png" />
 </div>
-<div class="section" id="">
-<span id="id6"></span><h2>离散概率分布<a class="headerlink" href="#" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="id7">
+<h2><a class="toc-backref" href="#id19">离散概率分布</a><a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
 <p>对于离散概率分布来说，我们关心的是取一个特定数值的概率</p>
-<ul>
-<li><p class="first"><strong>二项分布</strong></p>
-<p><img alt="" src="../../_images/二项分布.png" /></p>
-</li>
+<ul class="simple">
+<li><strong>二项分布</strong></li>
 </ul>
-<ul>
-<li><p class="first"><strong>几何分布</strong></p>
-<p><img alt="" src="../../_images/几何分布.png" /></p>
-</li>
-<li><p class="first"><strong>泊松分布</strong></p>
-<p><img alt="" src="../../_images/泊松分布.png" /></p>
+<div class="figure">
+<img alt="" src="../../_images/二项分布.png" />
+</div>
+<ul class="simple">
+<li><strong>几何分布</strong></li>
+</ul>
+<div class="figure">
+<img alt="" src="../../_images/几何分布.png" />
+</div>
+<ul class="simple">
+<li><strong>泊松分布</strong></li>
+</ul>
+<div class="figure">
+<img alt="" src="../../_images/泊松分布.png" />
+</div>
 <p>​</p>
-</li>
-<li><p class="first"><strong>要点</strong></p>
-<p><img alt="" src="../../_images/离散概率分布要点.png" /></p>
-</li>
+<ul class="simple">
+<li><strong>要点</strong></li>
 </ul>
+<div class="figure">
+<img alt="" src="../../_images/离散概率分布要点.png" />
 </div>
-<div class="section" id="">
-<span id="id7"></span><h2>连续概率分布<a class="headerlink" href="#" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="id8">
+<h2><a class="toc-backref" href="#id20">连续概率分布</a><a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
 <p>对于连续概率分布，我们关心的是取得一个特定范围的概率</p>
-<p><img alt="" src="../../_images/连续概率分布要点.png" /></p>
-<ul>
-<li><p class="first"><strong>正态分布</strong></p>
-<p><img alt="" src="../../_images/正态分布.png" /></p>
-</li>
+<div class="figure">
+<img alt="" src="../../_images/连续概率分布要点.png" />
+</div>
+<ul class="simple">
+<li><strong>正态分布</strong></li>
 </ul>
-<p>​    <img alt="" src="../../_images/正态分布求解办法.png" /></p>
-<ul>
-<li><p class="first"><strong>正态分布代替二项分布</strong></p>
-<p><img alt="" src="../../_images/正态代替二项分布.png" /></p>
-</li>
-<li><p class="first"><strong>正态分布代替泊松分布</strong></p>
-<p><img alt="" src="../../_images/正太代替泊松分布.png" /></p>
-</li>
-<li><p class="first"><strong>问题</strong></p>
-<p><img alt="" src="../../_images/连续概率分布问题(1).png" /></p>
-</li>
+<div class="figure">
+<img alt="" src="../../_images/正态分布.png" />
+</div>
+<p>​ <img alt="image0" src="../../_images/正态分布求解办法.png" /></p>
+<ul class="simple">
+<li><strong>正态分布代替二项分布</strong></li>
 </ul>
-<p><img alt="" src="../../_images/连续概率分布问题(2).png" /></p>
-<ul>
-<li><p class="first"><strong>练习</strong></p>
-<p><img alt="" src="../../_images/连续概概率分布练习.png" /></p>
-</li>
+<div class="figure">
+<img alt="" src="../../_images/正态代替二项分布.png" />
+</div>
+<ul class="simple">
+<li><strong>正态分布代替泊松分布</strong></li>
 </ul>
+<div class="figure">
+<img alt="" src="../../_images/正太代替泊松分布.png" />
+</div>
+<ul class="simple">
+<li><strong>问题</strong></li>
+</ul>
+<div class="figure">
+<img alt="" src="../../_images/连续概率分布问题(1).png" />
+</div>
+<div class="figure">
+<img alt="" src="../../_images/连续概率分布问题(2).png" />
+</div>
+<ul class="simple">
+<li><strong>练习</strong></li>
+</ul>
+<div class="figure">
+<img alt="" src="../../_images/连续概概率分布练习.png" />
 </div>
 </div>
-<div class="section" id="">
-<span id="id8"></span><h1>推论统计<a class="headerlink" href="#" title="永久链接至标题">¶</a></h1>
-<div class="section" id="">
-<span id="id9"></span><h2>统计抽样<a class="headerlink" href="#" title="永久链接至标题">¶</a></h2>
-<ul>
-<li><p class="first"><strong>偏倚的来源</strong></p>
-<p><img alt="" src="../../_images/偏倚的来源.png" /></p>
-</li>
-<li><p class="first"><strong>要点</strong></p>
-<p><img alt="" src="../../_images/统计抽样要点.png" /></p>
-</li>
-<li><p class="first"><strong>问题</strong></p>
-</li>
-</ul>
-<p><img alt="" src="../../_images/统计抽样问题.png" /></p>
 </div>
-<div class="section" id="">
-<span id="id10"></span><h2>总体和样本的估计<a class="headerlink" href="#" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id9">
+<h1><a class="toc-backref" href="#id21">推论统计</a><a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id10">
+<h2><a class="toc-backref" href="#id22">统计抽样</a><a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><strong>偏倚的来源</strong></li>
+</ul>
+<div class="figure">
+<img alt="" src="../../_images/偏倚的来源.png" />
+</div>
+<ul class="simple">
+<li><strong>要点</strong></li>
+</ul>
+<div class="figure">
+<img alt="" src="../../_images/统计抽样要点.png" />
+</div>
+<ul class="simple">
+<li><strong>问题</strong></li>
+</ul>
+<div class="figure">
+<img alt="" src="../../_images/统计抽样问题.png" />
+</div>
+</div>
+<div class="section" id="id11">
+<h2><a class="toc-backref" href="#id23">总体和样本的估计</a><a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
 <li><strong>点估计量（总体参数未知，根据样本估计总体）</strong></li>
 </ul>
-<p><img alt="" src="../../_images/点估计量要点.png" /></p>
+<div class="figure">
+<img alt="" src="../../_images/点估计量要点.png" />
+</div>
 <ul class="simple">
 <li><strong>总体方差的点估计</strong></li>
 </ul>
-<p><img alt="" src="../../_images/总体方差的点估计.png" /></p>
+<div class="figure">
+<img alt="" src="../../_images/总体方差的点估计.png" />
+</div>
 <ul class="simple">
 <li><strong>比例的抽样分布（总体参数已知，为样本计算概率</strong>）</li>
 </ul>
-<p><img alt="" src="../../_images/比例的抽样分布.png" /></p>
-<p><img alt="" src="../../_images/比例抽样分布要点.png" /></p>
+<div class="figure">
+<img alt="" src="../../_images/比例的抽样分布.png" />
+</div>
+<div class="figure">
+<img alt="" src="../../_images/比例抽样分布要点.png" />
+</div>
 <ul class="simple">
 <li><strong>均值的抽样分布（总体参数已知，为样本计算概率）</strong></li>
 </ul>
-<p><img alt="" src="../../_images/均值的抽样分布.png" /></p>
+<div class="figure">
+<img alt="" src="../../_images/均值的抽样分布.png" />
 </div>
-<div class="section" id="">
-<span id="id11"></span><h2>置信区间<a class="headerlink" href="#" title="永久链接至标题">¶</a></h2>
-<ul>
-<li><p class="first"><strong>置信区间</strong></p>
-<p><img alt="" src="../../_images/置信区间.png" /></p>
-</li>
-<li><p class="first"><strong>置信区间与点估计的区别</strong></p>
-</li>
+</div>
+<div class="section" id="id12">
+<h2><a class="toc-backref" href="#id24">置信区间</a><a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><strong>置信区间</strong></li>
 </ul>
-<p><img alt="" src="../../_images/置信区间与点估计的区别.png" /></p>
-<ul>
-<li><p class="first"><strong>求解置信区间的四步骤</strong></p>
-<p><img alt="" src="../../_images/置信区间的求解步骤.png" /></p>
-</li>
-<li><p class="first"><strong>求解置信区间的简便算法</strong></p>
-<p><img alt="" src="../../_images/置信区间简便方法.png" /></p>
-</li>
-<li><p class="first"><strong>t分布与正态分布的比较</strong></p>
-</li>
+<div class="figure">
+<img alt="" src="../../_images/置信区间.png" />
+</div>
+<ul class="simple">
+<li><strong>置信区间与点估计的区别</strong></li>
 </ul>
-<p><img alt="" src="../../_images/t分布与正态分布比较.png" /></p>
+<div class="figure">
+<img alt="" src="../../_images/置信区间与点估计的区别.png" />
+</div>
+<ul class="simple">
+<li><strong>求解置信区间的四步骤</strong></li>
+</ul>
+<div class="figure">
+<img alt="" src="../../_images/置信区间的求解步骤.png" />
+</div>
+<ul class="simple">
+<li><strong>求解置信区间的简便算法</strong></li>
+</ul>
+<div class="figure">
+<img alt="" src="../../_images/置信区间简便方法.png" />
+</div>
+<ul class="simple">
+<li><strong>t分布与正态分布的比较</strong></li>
+</ul>
+<div class="figure">
+<img alt="" src="../../_images/t分布与正态分布比较.png" />
+</div>
 <ul class="simple">
 <li>求t分布的标准分</li>
 </ul>
-<p><img alt="" src="../../_images/求t分布的标准分.png" /></p>
+<div class="figure">
+<img alt="" src="../../_images/求t分布的标准分.png" />
 </div>
-<div class="section" id="">
-<span id="id12"></span><h2>假设检验<a class="headerlink" href="#" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="id13">
+<h2><a class="toc-backref" href="#id25">假设检验</a><a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
 <li><strong>步骤</strong></li>
 </ul>
-<p><img alt="" src="../../_images/假设检验的步骤.png" /></p>
+<div class="figure">
+<img alt="" src="../../_images/假设检验的步骤.png" />
+</div>
 <ul class="simple">
 <li><strong>显著水平</strong></li>
 </ul>
-<p><img alt="" src="../../_images/显著水平.png" /></p>
+<div class="figure">
+<img alt="" src="../../_images/显著水平.png" />
+</div>
 <ul class="simple">
 <li><strong>单、双尾检验</strong></li>
 </ul>
-<p><img alt="" src="../../_images/单、双尾检验.png" /></p>
+<div class="figure">
+<img alt="" src="../../_images/单、双尾检验.png" />
+</div>
 <ul class="simple">
 <li><strong>假设检验要点</strong></li>
 </ul>
-<p><img alt="" src="../../_images/假设检验要点.png" /></p>
+<div class="figure">
+<img alt="" src="../../_images/假设检验要点.png" />
+</div>
 <ul class="simple">
 <li><strong>两类错误</strong></li>
 </ul>
-<p><img alt="" src="../../_images/第二类错误.png" /></p>
+<div class="figure">
+<img alt="" src="../../_images/第二类错误.png" />
+</div>
 <ul class="simple">
 <li><strong>第一类错误</strong></li>
 </ul>
-<p><img alt="" src="../../_images/第一类错误.png" /></p>
+<div class="figure">
+<img alt="" src="../../_images/第一类错误.png" />
+</div>
 <ul class="simple">
 <li><strong>第二类错误</strong></li>
 </ul>
-<p><img alt="" src="../../_images/第二类错误.png" /></p>
+<div class="figure">
+<img alt="" src="../../_images/第二类错误.png" />
+</div>
 <ul class="simple">
 <li><strong>功效</strong></li>
 </ul>
-<p><img alt="" src="../../_images/假设检验功效.png" /></p>
+<div class="figure">
+<img alt="" src="../../_images/假设检验功效.png" />
+</div>
 </div>
 <div class="section" id="x-2">
-<span id="x-2"></span><h2>$x^2$(卡方)分布<a class="headerlink" href="#x-2" title="永久链接至标题">¶</a></h2>
+<h2><a class="toc-backref" href="#id26"><span class="math">x^2</span>(卡方)分布</a><a class="headerlink" href="#x-2" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
-<li><strong>用$x2$检验评估差异</strong></li>
+<li><strong>用:math:`x2`检验评估差异</strong></li>
 </ul>
-<p><img alt="" src="../../_images/用x^2检验评估差异.png" /></p>
+<div class="figure">
+<img alt="" src="data_analysis\statistics\pictures/用x%5E2检验评估差异.png" />
+</div>
 <ul class="simple">
 <li><strong>卡方检验的统计量代表什么</strong></li>
 </ul>
-<p><img alt="" src="../../_images/卡方统计量解释.png" /></p>
+<div class="figure">
+<img alt="" src="../../_images/卡方统计量解释.png" />
+</div>
 <ul class="simple">
-<li><strong>$x2$分布的两个主要用途</strong></li>
+<li><strong>:math:`x2`分布的两个主要用途</strong></li>
 </ul>
-<p><img alt="" src="../../_images/x^2分布的两个主要用途.png" /></p>
+<div class="figure">
+<img alt="" src="data_analysis\statistics\pictures/x%5E2分布的两个主要用途.png" />
+</div>
 <ul class="simple">
 <li><strong>步骤</strong></li>
 </ul>
-<p><img alt="" src="../../_images/x^2假设检验.png" /></p>
+<div class="figure">
+<img alt="" src="data_analysis\statistics\pictures/x%5E2假设检验.png" />
+</div>
 <ul class="simple">
 <li><strong>拟合优度</strong></li>
 </ul>
-<p><img alt="" src="../../_images/卡方分布拟合优度.png" /></p>
+<div class="figure">
+<img alt="" src="../../_images/卡方分布拟合优度.png" />
+</div>
 <ul class="simple">
 <li><strong>求频数</strong></li>
 </ul>
-<p><img alt="" src="../../_images/求频数.png" /></p>
+<div class="figure">
+<img alt="" src="../../_images/求频数.png" />
+</div>
 <ul class="simple">
 <li><strong>求自由度</strong></li>
 </ul>
-<p><img alt="" src="../../_images/求自由度.png" /></p>
+<div class="figure">
+<img alt="" src="../../_images/求自由度.png" />
+</div>
 <ul class="simple">
 <li><strong>卡方检验要点</strong></li>
 </ul>
-<p><img alt="" src="../../_images/卡方检验要点.png" /></p>
+<div class="figure">
+<img alt="" src="../../_images/卡方检验要点.png" />
+</div>
 </div>
 </div>
 
